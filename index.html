@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VETO Pro Pac 全球代理布局 × 台灣代理商官網建站提案研究（2026-08）</title>
+<style>
+:root{
+  --bg:#F2ECDF; --surface:#FCFAF4; --surface-2:#F7F1E6;
+  --ink:#22271F; --muted:#62665A; --line:#E4DCCB;
+  --primary:#34573B; --primary-strong:#274430;
+  --primary-soft:rgba(52,87,59,.10); --primary-line:rgba(52,87,59,.30);
+  --clay:#8F6234; --warn:#96611B; --danger:#AF4636;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#15170F; --surface:#1E2016; --surface-2:#24271B;
+    --ink:#ECE9DE; --muted:#9D9B88; --line:#2F3123;
+    --primary:#9BC084; --primary-strong:#B4D49E;
+    --primary-soft:rgba(155,192,132,.14); --primary-line:rgba(155,192,132,.38);
+    --clay:#CB9C6E; --warn:#E0AC5B; --danger:#E0806F;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15170F; --surface:#1E2016; --surface-2:#24271B;
+  --ink:#ECE9DE; --muted:#9D9B88; --line:#2F3123;
+  --primary:#9BC084; --primary-strong:#B4D49E;
+  --primary-soft:rgba(155,192,132,.14); --primary-line:rgba(155,192,132,.38);
+  --clay:#CB9C6E; --warn:#E0AC5B; --danger:#E0806F;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  background:var(--bg); color:var(--ink);
+  font-family:"Segoe UI","Microsoft JhengHei","PingFang TC","Noto Sans TC",system-ui,sans-serif;
+  font-size:16px; line-height:1.75; overflow-x:hidden;
+}
+.wrap{max-width:860px; margin:0 auto; padding:44px 22px 64px;}
+h1{font-size:1.55rem; font-weight:600; line-height:1.45; margin:0 0 10px;}
+h2{font-size:1.15rem; font-weight:600; margin:44px 0 12px; padding-bottom:8px; border-bottom:1px solid var(--line);}
+h3{font-size:1rem; font-weight:600; margin:26px 0 8px;}
+h4{font-size:.95rem; font-weight:600; margin:18px 0 6px; color:var(--primary);}
+p{margin:0 0 12px;}
+a{color:var(--primary); text-decoration:none; border-bottom:1px solid var(--primary-line); word-break:break-all;}
+a:hover{color:var(--primary-strong); border-bottom-color:var(--primary-strong);}
+.lede{color:var(--muted); font-size:.88rem; margin:0;}
+.meta{color:var(--muted); font-size:.88rem; margin:0 0 4px;}
+hr{border:0; border-top:1px solid var(--line); margin:28px 0;}
+.card{background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:18px 20px; margin:0 0 16px;}
+.card > :first-child{margin-top:0;}
+.card > :last-child{margin-bottom:0;}
+.card-2{background:var(--surface-2); border:1px solid var(--line); border-radius:10px; padding:18px 20px; margin:0 0 16px;}
+.keycard{border-left:3px solid var(--primary); background:var(--surface); border-radius:10px; border:1px solid var(--line); border-left:3px solid var(--primary); padding:16px 20px; margin:0 0 14px;}
+.pill{display:inline-block; font-size:.72rem; letter-spacing:.04em; padding:2px 10px; border-radius:999px; background:var(--primary-soft); color:var(--primary); border:1px solid var(--primary-line); white-space:nowrap;}
+.pill-warn{background:transparent; color:var(--warn); border-color:var(--warn);}
+.pill-danger{background:transparent; color:var(--danger); border-color:var(--danger);}
+.pill-clay{background:transparent; color:var(--clay); border-color:var(--clay);}
+.tblwrap{overflow-x:auto; border:1px solid var(--line); border-radius:10px; margin:0 0 18px; background:var(--surface);}
+table{border-collapse:collapse; width:100%; min-width:640px; font-size:.9rem;}
+th{
+  background:var(--surface-2); color:var(--muted);
+  font-size:.76rem; letter-spacing:.05em; font-weight:600;
+  text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); white-space:nowrap;
+}
+td{padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top;}
+tbody tr:last-child td{border-bottom:0;}
+td.num, th.num{font-variant-numeric:tabular-nums; text-align:right;}
+.small{font-size:.88rem; color:var(--muted);}
+ul,ol{margin:0 0 12px; padding-left:1.35em;}
+li{margin:0 0 6px;}
+.kv{display:grid; grid-template-columns:104px 1fr; gap:4px 14px; font-size:.92rem; margin:0 0 10px;}
+.kv dt{color:var(--muted); font-size:.76rem; letter-spacing:.05em; padding-top:5px;}
+.kv dd{margin:0;}
+.sitehead{display:flex; flex-wrap:wrap; align-items:baseline; gap:8px; margin:0 0 4px;}
+.sitehead h3{margin:0;}
+.flag{font-size:.76rem; letter-spacing:.05em; color:var(--muted);}
+.good{color:var(--primary);}
+.bad{color:var(--danger);}
+.take{background:var(--primary-soft); border-radius:8px; padding:10px 14px; margin:10px 0 0; font-size:.92rem;}
+.take b{color:var(--primary);}
+.note{border-left:3px solid var(--warn); padding:2px 0 2px 14px; margin:0 0 14px; font-size:.9rem; color:var(--muted);}
+.danger-note{border-left:3px solid var(--danger); padding:2px 0 2px 14px; margin:0 0 14px; font-size:.9rem;}
+footer{margin-top:52px; padding-top:18px; border-top:1px solid var(--line); color:var(--muted); font-size:.88rem;}
+.toc{font-size:.92rem;}
+.toc ol{padding-left:1.3em;}
+@media (max-width:560px){
+  .wrap{padding:32px 16px 48px;}
+  .kv{grid-template-columns:1fr; gap:0 0;}
+  .kv dt{padding-top:8px;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="meta">如菓室內裝修｜市場研究報告　2026-08-20</p>
+  <h1>VETO Pro Pac 全球代理布局 × 台灣代理商官網建站提案研究（2026-08）</h1>
+  <p class="lede">交付對象：台灣代理商 澳立福實業有限公司（Olifor Enterprise Co., Ltd.）｜研究範圍：全球代理與通路盤點 37 家、代理商官網深研 18 站、台灣官網建站可行性與分階段建議</p>
+</header>
+
+<div class="card-2 toc" style="margin-top:26px;">
+  <strong style="font-size:.9rem;">章節</strong>
+  <ol style="margin:8px 0 0;">
+    <li><a href="#s1">結論先行</a></li>
+    <li><a href="#s2">方法與免責</a></li>
+    <li><a href="#s3">全球代理總表（37 家，分四區）</a></li>
+    <li><a href="#s4">代理官網深研（18 站逐站卡）</a></li>
+    <li><a href="#s5">建站模式歸納</a></li>
+    <li><a href="#s6">可行性評估與建議（提案用）</a></li>
+    <li><a href="#s7">頁尾與版本</a></li>
+  </ol>
+</div>
+
+<!-- ============ 1 ============ -->
+<h2 id="s1">1. 結論先行</h2>
+
+<div class="keycard">
+  <h4 style="margin-top:0;">全球布局：一句總結</h4>
+  <p style="margin:0;">VETO Pro Pac 走的是「品牌總站直營 ＋ 各國一家正式代理 ＋ 授權零售鋪貨」三層結構；本次實查 37 家對象中，只有 <b>17 家</b>有官方國際代理商頁背書，其餘 20 家屬零售商自行進貨上架。更關鍵的是：<b>官方頁面從頭到尾只寫 distributor，沒有任何一家被官方書面認定為「獨家 exclusive」</b>——各國站台上的「總代理／獨家」字樣皆為自述。</p>
+</div>
+
+<div class="keycard">
+  <h4 style="margin-top:0;">台灣現況：查證結果</h4>
+  <p>合作夥伴 <b>澳立福實業有限公司（統編 28012506，台中太平，2005-10-20 設立、資本額 500 萬、負責人許志豪）</b> 確實列名於 VETO 官方國際代理商頁，屬 <b>distributor</b>（官方未標 exclusive，對外文案建議用「台灣代理」而非「獨家總代理」，避免日後爭議）。</p>
+  <p>目前對外通路三條，<b>但沒有任何一個自有官網</b>：</p>
+  <ul style="margin-bottom:10px;">
+    <li>Facebook 專頁「VETO PRO PAC TAIWAN」（3,586 讚，Reels 單支觸及 2K–11K）——官網欄位只能指向美國總站</li>
+    <li>蝦皮賣場（shop 826388878，標示「台灣總代理現貨」）</li>
+    <li>北台灣官方認證展示店（實體）</li>
+  </ul>
+  <p style="margin:0;"><b>台灣是這個品牌的官網空白市場。</b>建站不是取代任何既有站台，而是把已經在跑的社群與賣場流量接住，補上品牌落地頁、經銷商地圖與 B2B 後台。</p>
+</div>
+
+<h3>官網建站最重要的 3 個參考點</h3>
+
+<div class="card">
+  <p style="margin:0 0 6px;"><span class="pill">參考點 1</span> <b>日本 LABAVO（vetopropac-japan.com，Shopify）——全球唯一把「代理商站」做成「品牌站」的範本</b></p>
+  <p style="margin:0;">三軸交叉分類（形狀 × 尺寸 × 系列）解決工具袋型號難記的問題；「VETO 診斷」30 秒互動選品測驗把功能性商品變成可玩的引導體驗；再加 5 年保固專頁與防偽／未授權通路警示頁。台灣站要抄的核心是<b>這一套「分類 ＋ 選品引導 ＋ 保固防偽」三件組</b>，它同時解決選購門檻與水貨亂價兩個真問題。</p>
+</div>
+
+<div class="card">
+  <p style="margin:0 0 6px;"><span class="pill">參考點 2</span> <b>澳洲 Aspen Pumps（vetopropac.com.au，WordPress + WooCommerce）——代理商為品牌另開獨立子站</b></p>
+  <p style="margin:0;">Aspen 自家主站賣冷凝泵，卻替 VETO 另開一個獨立網域子站，品牌識別乾淨不被稀釋；站內 B2C 明碼直購（例：NORWALK+ 16L TOTE A$224）與 B2B「Become A Distributor」申請表單雙入口並存。台灣站要抄的是<b>「明碼零售 ＋ 經銷申請」雙入口收斂在同一站</b>的架構——這正好對上老闆規劃的 B2B 月結 ＋ B2C 雙軌。</p>
+</div>
+
+<div class="card">
+  <p style="margin:0 0 6px;"><span class="pill">參考點 3</span> <b>紐西蘭 Premium Tools（vetopropac.co.nz）——B2B 導流的最低成本做法</b></p>
+  <p style="margin:0;">獨立一頁 <code>/distribution/</code>，明講對象是「有倉庫和／或展示間的貿易批發商」，填完由業務上班時間聯繫，<b>並給首張訂單折扣當誘因</b>。這是一頁就能做、成本最低的 B2B 入口。台灣站的 trade account 申請頁可直接照這個骨架做，再往上加自助審核。</p>
+</div>
+
+<div class="danger-note"><b>反例同樣要記住：</b>加拿大 vetopropac.ca 是一個只有三個連結的單頁空殼（沒有商品、沒有內容、聯絡資訊還藏在表單後面）；以色列 Or Shy 與土耳其 Acenersis 則把 VETO 埋在冷凍空調／電力儀器的多品牌雜燴目錄裡，品牌識別度近乎零。<b>台灣站的底線是：至少要有經銷商地圖與明碼聯絡資訊，且 VETO 必須有自己的品牌館，不能混在別的品類目錄裡。</b></div>
+
+<!-- ============ 2 ============ -->
+<h2 id="s2">2. 方法與免責</h2>
+
+<h3>2.1 五路掃描</h3>
+<div class="tblwrap">
+<table>
+<thead><tr><th style="width:22%">路線</th><th>做法</th></tr></thead>
+<tbody>
+<tr><td>官方名單</td><td>VETO 官方 <code>/international-distributors/</code> 與 <code>/authorized-dealers/</code> 兩頁逐筆抓取</td></tr>
+<tr><td>國別站台</td><td>各國自建 VETO 專屬網域（.ca／.com.au／.co.nz／japan）逐站實訪</td></tr>
+<tr><td>品牌頁反查</td><td>各國零售平台的 VETO 品牌／製造商分類頁（Bunnings、RS、Noon 等）</td></tr>
+<tr><td>商品頁反查</td><td>單品型號（Tech Pac、TP-XL、DP3 等）在地語言搜尋，回推在地零售商</td></tr>
+<tr><td>公司登記／商業資料</td><td>各國工商登記、NZBN、台灣商工登記等，核對公司實體、成立年、地址</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>2.2 收斂過程：64 → 48 → 37</h3>
+<p>初步線索 <b>64 條</b>；剔除明顯失效與無關者後保留 <b>48 筆</b>紀錄；再經逐筆去重（同一家公司在不同路線重複命中 11 筆）與證據實查，最終收錄 <b>37 家</b>不重複的代理／通路，其中官方名單背書 17 家、零售鋪貨 20 家。官網深研 20 筆掃描紀錄中，土耳其 Acenersis 重複 3 筆合併為 1，實得 <b>18 站</b>（含品牌總站 1 站、無官網 2 家）。</p>
+
+<h3>2.3 把關抽驗與剔除紀錄</h3>
+<p>本報告經第二輪逐筆實查把關：代理 8 家逐筆重開 evidence_url、網站 5 站以上重抓 HTML。結果如下——</p>
+
+<div class="danger-note">
+<b>最硬的一刀：IMPEXRON（德國）</b>——其自家 evidence 頁白紙黑字寫著「Obwohl wir nicht der offizielle Vertriebspartner oder Händler von Veto Pro Pac in Deutschland sind」（雖然我們不是 Veto Pro Pac 在德國的官方經銷夥伴或代理商），<b>自承非官方代理、純轉售</b>，直接剔除。
+</div>
+
+<div class="tblwrap">
+<table>
+<thead><tr><th style="width:26%">剔除／降級對象</th><th>處置</th><th>理由</th></tr></thead>
+<tbody>
+<tr><td>IMPEXRON（德國）</td><td><span class="pill pill-danger">剔除</span></td><td>官網自承「非 VETO 德國官方經銷夥伴或代理商」，屬純轉售</td></tr>
+<tr><td>Elfa / Distrelec（瑞典）</td><td><span class="pill pill-danger">剔除</span></td><td>evidence_url 現已導向 RS 一般頁，全頁 0 個 veto 字串，原品牌頁不存在</td></tr>
+<tr><td>澳洲 6 家零售商<br><span class="small">Air Diffusion、Coolparts、Koldpak、Refrigeration Distributors、VEK 等</span></td><td><span class="pill pill-danger">剔除</span></td><td>所引用的官方頁面上根本沒有這 6 家，證據不成立</td></tr>
+<tr><td>6 筆「exclusive 獨家」標記</td><td><span class="pill pill-warn">全數降級為 distributor</span></td><td>官方頁一律只寫 distributor，「獨家」全無官方書面背書，皆為當事人自述</td></tr>
+<tr><td>2 站平台判斷</td><td><span class="pill pill-warn">修正</span></td><td>重抓 HTML 後更正（含 VETO 官方站為 WordPress + WooCommerce，非 Shopify；Beesleys 為 osCommerce 4.0 現代重寫版，非 2.x 老版）</td></tr>
+<tr><td>泰國 Min Thong</td><td><span class="pill pill-warn">保留但加警語</span></td><td>官方名單有它，但其站上未上架任何 VETO 品項（首頁與站內搜尋 veto 皆為 0），不宜當 UIUX 參考案例</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>2.4 免責</h3>
+<div class="note">
+<ul style="margin:0;">
+<li><b>代理關係一律以各站自述與官方頁面為準</b>，本報告不代 VETO 認定任何一家的法律地位；「exclusive／總代理」等字樣若無官方背書，本報告一律記為 distributor。</li>
+<li>VETO 官方 <code>/authorized-dealers/</code> 頁的發文日為 <b>2020-02-14</b>，名單為「Amazon 授權賣家（美 3、英 7）」＋「非 Amazon 之授權網路賣家」，已逾六年未見更新，本報告據此將該來源之對象信心度標為 medium，正式引用前請向品牌方複核現況。</li>
+<li>聯絡資訊<b>只收錄各官方頁面或公司自家網站公開刊登者</b>，未公開者留白，不推測、不補齊。</li>
+<li>部分站台有 Cloudflare 機器人驗證（紐西蘭 Premium Tools、馬來西亞 Arvo、澳洲 VETO 站），無法直接取得完整 HTML 之欄位已逐項標註「未能直接驗證」，不臆測。</li>
+<li>網站平台、功能與價格資訊為 2026-08 快照，<b>隨時可能變動</b>；提案引用前建議重新抽查關鍵三站（日本、澳洲、紐西蘭）。</li>
+</ul>
+</div>
+
+<!-- ============ 3 ============ -->
+<h2 id="s3">3. 全球代理總表</h2>
+<p class="small">型態欄：<b>distributor</b>＝官方國際代理商名單列名｜<b>retailer</b>＝零售／鋪貨通路。信心度：high＝官方頁或公司自有官方站可直接驗證；medium＝來源為 2020 年舊公告頁；low＝僅由第三方商品頁反查，無官方背書。</p>
+
+<h3>3.1 北美（4 家）</h3>
+<div class="tblwrap">
+<table>
+<thead><tr><th>國家</th><th>公司</th><th>型態</th><th>官網</th><th>聯絡</th><th>信心度</th></tr></thead>
+<tbody>
+<tr><td>加拿大</td><td>Triangle Enterprises (International) Ltd.</td><td>distributor</td><td><a href="https://www.vetopropac.ca">vetopropac.ca</a></td><td>sales@vetopropac.ca／403-230-1910<br><span class="small">244 41 Ave NE, Calgary, AB T2E 2N3</span></td><td><span class="pill">high</span></td></tr>
+<tr><td>加拿大</td><td>B&amp;E Electronics</td><td>retailer</td><td><a href="https://www.be-electronics.com/Veto_Pro_Pac_s/2143.htm">be-electronics.com</a></td><td>—</td><td><span class="pill pill-warn">low</span></td></tr>
+<tr><td>加拿大</td><td>Refrigerative Supply Ltd.</td><td>retailer</td><td><a href="https://www.rsl.ca/Brands/veto-pro-pac/Catalog/All">rsl.ca</a></td><td>—</td><td><span class="pill pill-warn">low</span></td></tr>
+<tr><td>墨西哥</td><td>Travers Tool S. de R.L. de C.V.</td><td>distributor</td><td><a href="https://www.travers.com.mx">travers.com.mx</a></td><td>yaravi.cardozo@travers.com.mx／+52 442-209-6600<br><span class="small">Av. 5 de Febrero No. 10051, Querétaro, Qro. 76100</span></td><td><span class="pill">high</span></td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>3.2 歐洲（11 家）</h3>
+<div class="tblwrap">
+<table>
+<thead><tr><th>國家</th><th>公司</th><th>型態</th><th>官網</th><th>聯絡</th><th>信心度</th></tr></thead>
+<tbody>
+<tr><td>英國</td><td>Epic Air Ltd</td><td>distributor</td><td><a href="https://epicair.co.uk/">epicair.co.uk</a></td><td>info@epicair.co.uk／01892 600121<br><span class="small">Unit 4 Hartley Dyke Business Centre, Cranbrook, Kent TN17 3QG</span></td><td><span class="pill">high</span></td></tr>
+<tr><td>英國／歐洲</td><td>Javac ／ Aspen Pumps Group Ltd</td><td>distributor</td><td><a href="https://aspenpumps.com">aspenpumps.com</a></td><td>sales@aspenpumps.com／+44 (0)1323 848842<br><span class="small">Apex Way, Hailsham, East Sussex BN27 3WA</span></td><td><span class="pill">high</span></td></tr>
+<tr><td>英國</td><td>Beesleys Tools Ltd（Tool-Shop.co.uk）</td><td>retailer</td><td><a href="https://www.tool-shop.co.uk/">tool-shop.co.uk</a></td><td>beesleys@tool-shop.co.uk／01793 525233<br><span class="small">1 Beatrice Street, Swindon SN2 1BB</span></td><td><span class="pill">high</span></td></tr>
+<tr><td>英國</td><td>FFX</td><td>retailer</td><td><a href="https://www.ffx.co.uk">ffx.co.uk</a></td><td>—</td><td><span class="pill pill-clay">medium</span></td></tr>
+<tr><td>英國</td><td>Power Tool Centre (PTC)</td><td>retailer</td><td><a href="https://www.powertoolcentre.co.uk">powertoolcentre.co.uk</a></td><td>—</td><td><span class="pill pill-clay">medium</span></td></tr>
+<tr><td>英國</td><td>PrimeTools Limited</td><td>retailer</td><td><a href="https://www.primetools.co.uk">primetools.co.uk</a></td><td>—</td><td><span class="pill pill-clay">medium</span></td></tr>
+<tr><td>英國</td><td>Birco Distribution Ltd</td><td>retailer</td><td>—</td><td>—</td><td><span class="pill pill-clay">medium</span></td></tr>
+<tr><td>英國</td><td>AC-One</td><td>retailer</td><td>—</td><td>—</td><td><span class="pill pill-clay">medium</span></td></tr>
+<tr><td>英國</td><td>ToolsDirect.co.uk</td><td>retailer</td><td><a href="https://www.toolsdirect.co.uk">toolsdirect.co.uk</a></td><td>—</td><td><span class="pill pill-clay">medium</span></td></tr>
+<tr><td>冰島</td><td>Pronet ehf</td><td>distributor</td><td><a href="https://verslun.pronet.is/">verslun.pronet.is</a></td><td>pronet@pronet.is／+354 540 3520<br><span class="small">Ögurhvarf 8, 203 Kópavogur</span></td><td><span class="pill">high</span></td></tr>
+<tr><td>法國</td><td>KLIMA France</td><td>retailer</td><td><a href="https://www.klimafrance.com">klimafrance.com</a></td><td>—</td><td><span class="pill pill-warn">low</span></td></tr>
+</tbody>
+</table>
+</div>
+<p class="small">英國 6 家 medium 級零售商（FFX 起算）來源均為官方 2020-02-14 之授權賣家公告頁，其中 FFX 等為「Amazon 授權賣家（僅限 Amazon 通路）」、ToolsDirect 等為「非 Amazon 之授權網路賣家」。</p>
+
+<h3>3.3 亞太（15 家）</h3>
+<div class="tblwrap">
+<table>
+<thead><tr><th>國家</th><th>公司</th><th>型態</th><th>官網</th><th>聯絡</th><th>信心度</th></tr></thead>
+<tbody>
+<tr><td><b>台灣</b></td><td><b>澳立福實業有限公司 Olifor Enterprise Co., Ltd.</b><span class="small">（統編 28012506）</span></td><td>distributor<br><span class="small">（不得寫 exclusive）</span></td><td>無自有官網<br><span class="small"><a href="https://www.facebook.com/VETO.PRO.PAC.TAIWAN/">FB 專頁</a>／蝦皮 shop 826388878</span></td><td>0979-120-333／olifor@me.com<br>04-2395-7172（Fax 04-2395-7767）<br><span class="small">官方頁刊登：台中市太平區怡昌東路 107 號；商工登記：台中市太平區立德街 99 號 1 樓（兩址並存，接洽前先確認現行辦公地）</span></td><td><span class="pill">high</span></td></tr>
+<tr><td>日本</td><td>LABAVO LLC（ラバボ合同会社）</td><td>distributor</td><td><a href="https://vetopropac-japan.com/">vetopropac-japan.com</a></td><td>support@vetopropacjapan.com／+81-45-315-4206<span class="small">（官網註記電話暫停服務，改走 email／表單）</span><br><span class="small">神奈川県横浜市西区北幸2-10-48 むつみビル3F</span></td><td><span class="pill">high</span></td></tr>
+<tr><td>南韓</td><td>Sang-Bo Corporation（상보기업）</td><td>distributor</td><td><a href="http://sangbo.co.kr/eng/">sangbo.co.kr</a><br><span class="small">B2B 訂貨網 yes09.sangbo.co.kr</span></td><td>trade@sangbo.co.kr／+82-2-2068-0381<br><span class="small">Sangbo Bldg, 9-64 Sindorim-ro 11-gil, Guro-gu, Seoul 08206</span></td><td><span class="pill">high</span></td></tr>
+<tr><td>南韓</td><td>티와이공구 TY Tools</td><td>retailer</td><td><a href="https://tytools.kr/">tytools.kr</a></td><td>—</td><td><span class="pill pill-warn">low</span></td></tr>
+<tr><td>南韓</td><td>쿨링툴 Cooling Tool</td><td>retailer</td><td><a href="http://www.coolingtool.co.kr/">coolingtool.co.kr</a></td><td>—</td><td><span class="pill pill-warn">low</span></td></tr>
+<tr><td>南韓</td><td>카리스툴 Charis Tool</td><td>retailer</td><td><a href="https://charistool.com/">charistool.com</a></td><td>—</td><td><span class="pill pill-warn">low</span></td></tr>
+<tr><td>越南</td><td>G7 Tools Co., Ltd</td><td>distributor</td><td><a href="https://g7tools.com/">g7tools.com</a></td><td>nancy.phung@g7tools.com／0981 222 034<br><span class="small">532/2 Quarter 8A, Tan Bien Ward, Bien Hoa, Dong Nai</span></td><td><span class="pill">high</span></td></tr>
+<tr><td>泰國</td><td>Min Thong Supplies Ltd Partnership</td><td>distributor<br><span class="pill pill-warn">站上 0 個 VETO 品項</span></td><td><a href="https://www.minthong.com/th">minthong.com</a></td><td>Minthong_TH@hotmail.com／02-989-4628（12 線代表號）<br><span class="small">曼谷 Nong Chok 區</span></td><td><span class="pill">high</span></td></tr>
+<tr><td>中國</td><td>Nantong Yingfeige Trading Co., Ltd<span class="small">（南通盈丰阁贸易）</span></td><td>distributor</td><td>查無官網</td><td>2545437196@qq.com／18778017263（微信）<br><span class="small">江蘇南通海門區包場鎮呂家街 66 號</span></td><td><span class="pill">high</span></td></tr>
+<tr><td>馬來西亞</td><td>Arvo Aircond &amp; Refrigeration Tools Supply Sdn Bhd</td><td>distributor</td><td><a href="https://www.arvotools.com.my/">arvotools.com.my</a></td><td>enquiry@arvotools.com.my／+6016-615 9826<br><span class="small">4 &amp; 4A, Jalan Anggerik Mokara H31/H, Kota Kemuning, 40460 Shah Alam</span></td><td><span class="pill">high</span></td></tr>
+<tr><td>澳洲</td><td>Aspen Pumps Asia Pacific Pty Ltd<br><span class="small">（同時經營官方澳洲站 vetopropac.com.au）</span></td><td>distributor</td><td><a href="https://www.vetopropac.com.au/">vetopropac.com.au</a><br><span class="small"><a href="https://www.aspenpumps.com.au/">aspenpumps.com.au</a></span></td><td>sales@aspenpumps.com.au／+61 8 8186 4666<br><span class="small">8 Waddikee Rd, Lonsdale SA 5160</span></td><td><span class="pill">high</span></td></tr>
+<tr><td>紐西蘭</td><td>Premium Tools (NZ) Limited</td><td>distributor</td><td><a href="https://www.vetopropac.co.nz/">vetopropac.co.nz</a></td><td>sales@premium-tools.co.nz／+64 9 444 2560<br><span class="small">Unit 1D, 89 Ellice Road, Wairau Valley, Auckland 0629</span></td><td><span class="pill">high</span></td></tr>
+<tr><td>紐西蘭</td><td>Bunnings New Zealand</td><td>retailer</td><td><a href="https://www.bunnings.co.nz/brands/v/veto-pro-pac">bunnings.co.nz</a></td><td>—</td><td><span class="pill pill-warn">low</span></td></tr>
+<tr><td>紐西蘭</td><td>Ideal Electrical Suppliers Limited</td><td>retailer</td><td><a href="https://www.ideal.co.nz/collections/brands-veto-pro-pac-brand_vet">ideal.co.nz</a></td><td>—</td><td><span class="pill pill-warn">low</span></td></tr>
+<tr><td>紐西蘭</td><td>PiranhaTools</td><td>retailer</td><td><a href="https://piranhatools.co.nz/products/xlt-veto-pro-pac">piranhatools.co.nz</a></td><td>—</td><td><span class="pill pill-warn">low</span></td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>3.4 其他區域：中東／非洲／拉美（7 家）</h3>
+<div class="tblwrap">
+<table>
+<thead><tr><th>國家</th><th>公司</th><th>型態</th><th>官網</th><th>聯絡</th><th>信心度</th></tr></thead>
+<tbody>
+<tr><td>以色列</td><td>M.C. Or Shy Ltd（אור שי）</td><td>distributor</td><td><a href="https://www.orshy.co.il/">orshy.co.il</a></td><td>+972-3-5583303<br><span class="small">16 Hasatat/Hapeled St., Industrial Zone, Holon 5885531（官網未刊 email，僅表單）</span></td><td><span class="pill">high</span></td></tr>
+<tr><td>土耳其</td><td>Acenersis ／ Roda Elektronik Ltd. Şti.</td><td>distributor</td><td><a href="https://www.acenersis.com">acenersis.com</a></td><td>info@acenersis.com／+90 312 346 69 94<br><span class="small">Mehmet Akif Ersoy Mah. 287 Sok. Golden Tower No:7 D:24, Yenimahalle/Ankara</span></td><td><span class="pill">high</span></td></tr>
+<tr><td>阿聯</td><td>Whizz.ae</td><td>retailer</td><td><a href="https://www.whizz.ae/brand/veto-pro-pac/">whizz.ae</a></td><td>—</td><td><span class="pill pill-warn">low</span></td></tr>
+<tr><td>阿聯</td><td>Noon.com</td><td>retailer</td><td><a href="https://www.noon.com/uae-en/veto-pro-pac-tech-mct-tool-bag-original/">noon.com</a></td><td>—</td><td><span class="pill pill-warn">low</span></td></tr>
+<tr><td>南非</td><td>RS Components South Africa</td><td>retailer</td><td><a href="https://za.rs-online.com/web/b/veto-pro-pac/">za.rs-online.com</a></td><td>—</td><td><span class="pill pill-warn">low</span></td></tr>
+<tr><td>南非</td><td>WantItAll</td><td>retailer</td><td><a href="https://www.wantitall.co.za/brands/veto-pro-pac/all/p1">wantitall.co.za</a></td><td>—</td><td><span class="pill pill-warn">low</span></td></tr>
+<tr><td>巴西</td><td>Delupo</td><td>retailer</td><td><a href="https://www.delupo.com.br">delupo.com.br</a></td><td>—</td><td><span class="pill pill-warn">low</span></td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card-2">
+<p style="margin:0 0 6px;"><b>總表讀後三個觀察</b></p>
+<ul style="margin:0;">
+<li><b>代理主體幾乎都不是「工具品牌商」。</b>17 家官方名單代理中，主業為 HVAC/R 設備（Aspen、Epic Air、Arvo、Or Shy、Min Thong）或工業儀器（Acenersis、Sang-Bo、Travers）者佔多數，VETO 常是眾多代理線之一。<b>日本 LABAVO 與紐西蘭 Premium Tools 是少數把 VETO 當主力經營者</b>——台灣 Olifor 的主業是義大利 IMF 烘豆機，結構上更接近前者，這是建站時要正視的前提：官網必須自己扛品牌經營，不能指望代理商本業帶流量。</li>
+<li><b>零售鋪貨佔了一半以上（20/37）。</b>代表 VETO 在多數市場採「代理鋪貨到既有五金／HVAC 通路」而非直營電商，台灣若把官網做成品牌館 ＋ 經銷後台，正好卡在這個模式的最佳位置。</li>
+<li><b>官方名單本身老舊。</b>授權賣家頁停留在 2020-02-14，國際代理商頁的資料也未見更新機制。台灣站若能自建並維護一份可信的「台灣授權經銷商地圖」，等於替品牌補上官方沒做的事，也是打水貨最有力的工具。</li>
+</ul>
+</div>
+
+<!-- ============ 4 ============ -->
+<h2 id="s4">4. 代理官網深研（18 站）</h2>
+<p class="small">每站一卡。平台判斷均附證據；無法直接取得 HTML 者已標「未能直接驗證」。18 站＝品牌總站 1 ＋ 有官網代理 15 ＋ 無官網代理 2。</p>
+
+<!-- 0 官方 -->
+<div class="card">
+  <div class="sitehead"><h3>00　VETO Pro Pac 官方總站</h3><span class="flag">美國｜品牌本站，非代理商</span></div>
+  <dl class="kv">
+    <dt>公司</dt><dd>VETO Pro Pac（2002 年由 Roger Brouard 創立於康乃狄克州 Norwalk；2025-07-08 被 Malco Tools 併購，現為 Malco Group 旗下品牌，總部仍在 Norwalk, CT）</dd>
+    <dt>連結</dt><dd><a href="https://vetopropac.com">vetopropac.com</a>｜customerservice@vetopropac.com／sales@vetopropac.com／(877) 847-1443｜3 Morgan Avenue, Norwalk, CT 06851</dd>
+    <dt>平台</dt><dd><b>WordPress + WooCommerce</b>（GeneratePress 佈景 ＋ WPBakery Page Builder）<br><span class="small">依據：HTML 含 /wp-content/ 路徑、頁尾 GeneratePress 標示、WP ADA Compliance 外掛痕跡。<b>把關修正：先前誤判為 Shopify，已更正。</b></span></dd>
+    <dt>前台結構</dt><dd>多層導覽分 Products／VETO GO／Malco／Customer Service／Group Programs／Dealer-Distribution／Veto Super Stores；商品採「產品類型（工具袋／背包／腰包／儲物盒）× 職業別（電工／水電／HVAC／木工／機械／消防）」雙軸分類；有會員登入、願望清單、產品比較；未見多語言切換。</dd>
+    <dt>功能</dt><dd>完整產品線 ＋ VETO GO 生活線／Dealer Locator／會員帳號／願望清單／產品比較／保固註冊與理賠／客戶實拍與裝載影片內容區／部落格／社群串接（FB、IG、YouTube、X）。未見多幣別或線上即時客服。</dd>
+    <dt>B2B 面</dt><dd>最完整的一站：頁尾 REPS／DEALERS／DISTRIBUTORS 區塊含 Dealer Locator、International Distributors、Become a Dealer、Become a Sales Rep、Become a Country Distributor、Distributor-Sales Rep Portal；另有 Veto Super Store 加盟制度與 Custom Logo、Fleet Sales、Government、Military、Schools、Trade School 六項 Program。</dd>
+    <dt>UIUX 優</dt><dd class="good">1. 「產品類型 × 職業別」雙軸導覽，工班能依自身職種直接對號入座。2. Dealer Locator 與 Become a Dealer 兩個獨立入口，清楚分流消費者與經銷商動線。3. 客戶實拍／裝載影片內容區，真實感與可信度都靠這個撐。</dd>
+    <dt>UIUX 缺</dt><dd class="bad">1. Products／VETO GO／Malco／Dealer 等並列的多層選單造成導覽負擔，行動端偏擠。2. 無多語言／多幣別，國際訪客不友善。3. B2B 報價與月結流程仍靠 email／電話人工承接，站上未自動化。</dd>
+    <dt>風格</dt><dd>工業實用風：以職業分類與功能為主軸的目錄型電商版面，視覺服務於「快速找到對應職種的工具袋」而非品牌美學敘事。</dd>
+  </dl>
+  <p class="take"><b>最值得抄的一件事：</b>「依職業別 ＋ 依產品類型」雙軸導覽——台灣工班同樣是水電、木工、空調分流，這套分類能讓客人三秒對號入座。</p>
+</div>
+
+<!-- 1 Japan -->
+<div class="card">
+  <div class="sitehead"><h3>01　LABAVO LLC（VETO PRO PAC JAPAN）</h3><span class="flag">日本｜代理商自營品牌站</span> <span class="pill">首選範本</span></div>
+  <dl class="kv">
+    <dt>公司</dt><dd>ラバボ合同会社（橫濱小型貿易商社，代表人 CEO 鈴木大樹），代理多國品牌，VETO 為主力</dd>
+    <dt>連結</dt><dd><a href="https://vetopropac-japan.com">vetopropac-japan.com</a>｜support@vetopropacjapan.com｜045-315-4206（官網註記暫停服務，改走 email／表單）</dd>
+    <dt>平台</dt><dd><b>Shopify</b><br><span class="small">依據：頁面資源含 cdn.shop/files/ 路徑（Shopify CDN 特徵），結構與模板皆為 Shopify 標準</span></dd>
+    <dt>前台結構</dt><dd>三軸交叉分類：依形狀（開口／封閉頂、後背包、工具袋、圍裙、輪式、貨運袋）、依尺寸（S／M／L／XL）、依系列（BLACK OUT／HI-VIZ／EDC／EVO／TECH／Contractor／Marine／Plumbing）；另設「新品 2026」「熱銷」「全商品」；搜尋為圖示彈出式。</dd>
+    <dt>功能</dt><dd>購物車與結帳／會員登入／商品評論含客戶實拍／YouTube 產品與見證影片嵌入／LINE 導流送 1,000 円折價券／5 年保固專頁／經銷商地圖（區分高量零售商與一般經銷商）／<b>「VETO 診斷」30 秒選品測驗</b>／防偽與未授權通路（Amazon、樂天、Yahoo 購物）警示頁。</dd>
+    <dt>B2B 面</dt><dd>未見獨立批發申請、trade account 或月結報價入口；僅有經銷商地圖區分高量零售商與一般經銷商，屬 B2C 導購性質。<b>台灣站規劃的月結／經銷申請功能，此站沒有現成可抄，須另行開發。</b></dd>
+    <dt>UIUX 優</dt><dd class="good">1. 互動選品測驗降低專業工具的選購門檻，把功能性商品變成有趣的引導體驗。2. 三軸交叉分類讓專業使用者不必死背型號就能收斂需求。3. 首頁大量真實使用場景照片（貿易／水電／木工實拍），信任感靠實拍而非文案。</dd>
+    <dt>UIUX 缺</dt><dd class="bad">1. 無清楚 B2B／經銷申請入口，想批發的店家找不到門。2. 電話停用只剩 email／表單，客服管道單薄。3. 防偽警示頁雖必要但佔版面重，稀釋購物體驗。</dd>
+    <dt>風格</dt><dd>簡約專業、以商品攝影為主的日系電商風；白底 ＋ 大圖 ＋ 清楚分類選單，重信任背書（保固、防偽）勝過視覺花俏。</dd>
+  </dl>
+  <p class="take"><b>最值得抄的一件事：</b>用互動選品測驗（VETO 診斷）取代死板分類清單，降低專業工具的選購門檻——這也是台灣站最容易做出差異的一招。</p>
+</div>
+
+<!-- 2 Australia -->
+<div class="card">
+  <div class="sitehead"><h3>02　Aspen Pumps Asia Pacific（VETO PRO PAC AUSTRALIA）</h3><span class="flag">澳洲｜代理商為品牌另開子站</span> <span class="pill">雙軌範本</span></div>
+  <dl class="kv">
+    <dt>公司</dt><dd>澳洲 HVAC/R 與水電批發通路商，總部 Lonsdale, SA；前身 Pro Pipe Supplies（1999 創立），2006 起代理 Aspen Pumps，2015 被 Aspen Pumps Group 併購更名，同時代理 VETO 澳洲／亞太市場</dd>
+    <dt>連結</dt><dd><a href="https://www.vetopropac.com.au/">vetopropac.com.au</a>（企業主站 <a href="https://aspenpumps.com.au/">aspenpumps.com.au</a>）｜sales@aspenpumps.com.au／+61 8 8186 4666</dd>
+    <dt>平台</dt><dd><b>WordPress + WooCommerce</b>（自建外掛電商，非 Shopify／Magento）<br><span class="small">依據：VETO AU 站 HTML 出現 wp-content 206 處、woocommerce 160 處（Aspen 主站 246 處）；含 .woocommerce-page、.single_add_to_cart_button 等標準 class；購物車 /cart/、加購連結 ?add-to-cart=17943 為 WooCommerce 標準格式</span></dd>
+    <dt>前台結構</dt><dd>導覽 Home／Products／About（品牌哲學、產品特色、5 年保固）／Where To Buy?（全國經銷商、獨立經銷商、線上經銷商、成為經銷商）／Contact；首頁四大系列輪播（EVO 模組系統、VETO GO 生活包、Lunch Box 保冷袋、Special Ops 反光黃）＋ 四大分類卡片（Tech／Backpack／EDC／Tool Pouches）；站內搜尋燈箱與精選商品區。</dd>
+    <dt>功能</dt><dd>標準 WooCommerce 購物車與結帳（含 PayPal）／商品多圖切換／系列與分類篩選頁／<b>5 年保固線上申請頁</b>／<b>索取紙本型錄表單（名單開發）</b>／社群連結／Cookie 同意彈窗。未見多幣別、多語言、影片內嵌、門市地圖或會員評論。</dd>
+    <dt>B2B 面</dt><dd>導覽無獨立 trade account 登入；B2B 收斂在「Where To Buy? → Become A Distributor」單一頁面走詢價表單。零售交易走 WooCommerce 明碼直購（如 NORWALK+ 16L TOTE A$224），批發走人工申請，<b>兩軌分離但都在同一站</b>。</dd>
+    <dt>UIUX 優</dt><dd class="good">1. 為代理品牌獨立開子站，不與自家主站混雜，品牌識別乾淨。2. 首頁四張情境化系列輪播直接導購，購買路徑短。3. 5 年保固與索取型錄表單前置在首頁，兼顧售後信任與名單蒐集。</dd>
+    <dt>UIUX 缺</dt><dd class="bad">1. 無 trade 帳號與月結機制，B2B 客戶仍要走表單人工詢問，效率低於台灣規劃的 B2B 月結 ＋ B2C 雙軌。2. 無多語言／多幣別，不利外銷擴張。3. Cloudflare 防護重（自動化工具遭 403），可能連帶影響部分第三方工具可用性。</dd>
+    <dt>風格</dt><dd>工業風硬派：品牌橙 #f1672b × 深黑 #242021 撞色，粗體美式字型 Alfa Slab One，「TOUGH. DURABLE. FUNCTIONAL.」大字報版面。</dd>
+  </dl>
+  <p class="take"><b>最值得抄的一件事：</b>B2C 直購與 B2B 經銷申請分軌但都收斂進同一站——台灣官網應比照做「明碼零售 ＋ 經銷申請」雙入口。</p>
+</div>
+
+<!-- 3 NZ -->
+<div class="card">
+  <div class="sitehead"><h3>03　Premium Tools (NZ) Limited（VETO PRO PAC NZ）</h3><span class="flag">紐西蘭｜代理商自營品牌站</span> <span class="pill">B2B 入口範本</span></div>
+  <dl class="kv">
+    <dt>公司</dt><dd>2013-01-18 設立於奧克蘭（NZBN 9429030379961），約 4 人小型專業代理商；除 VETO 外另代理 Wiha Tools、Lyra Marking、Unilite，屬多品牌工具批發商</dd>
+    <dt>連結</dt><dd><a href="https://www.vetopropac.co.nz/">vetopropac.co.nz</a>｜sales@premium-tools.co.nz／+64 9 444 2560｜Unit 1D, 89 Ellice Road, Wairau Valley, Auckland 0629</dd>
+    <dt>平台</dt><dd><b>研判為 WordPress + WooCommerce</b>（信心中等，<b>未能直接驗證原始碼</b>）<br><span class="small">依據：站點受 Cloudflare 機器人防護擋下 WebFetch 與瀏覽器渲染兩種管道；改由 Google 索引到的 URL 結構判斷——/product/tp-lc/、/product-category/marine-series/、/product-tag/tplc/ 為 WooCommerce 典型 permalink（Shopify 固定用 /products/ 與 /collections/，且無 /product-tag/）</span></dd>
+    <dt>前台結構</dt><dd>從索引頁面推斷：頂層含 Marine Series、Tech Series 等產品線頁，另有獨立 About、Contact、Distribution（經銷申請）、Where to Buy 頁。導覽列、搜尋、篩選細節<b>因防護擋下無法目視確認</b>。</dd>
+    <dt>功能</dt><dd>可確認：Where to Buy 門市／通路地圖（連往 Bunnings NZ、Ideal Electrical、PiranhaTools）、Distribution 經銷申請頁、About、Contact、依系列分類、產品標籤頁。<b>購物車、會員、多幣別、部落格、影片、評論等無法確認，不臆測。</b></dd>
+    <dt>B2B 面</dt><dd><b>獨立 /distribution/ 頁做經銷申請</b>：明訂對象為「有倉庫和／或展示間的貿易批發商」，填單後由業務於上班時間聯繫，<b>並提供首張訂單折扣誘因</b>。未見公開的線上批發下單或月結流程細節（可能人工審核後另開帳號，未能進一步查證）。</dd>
+    <dt>UIUX 優</dt><dd class="good">未能直接視覺驗證。僅能從索引摘要判斷：分類結構清楚（依系列／用途分產品線），有獨立經銷申請與門市查詢頁，代理商站架構完整而不只是型錄頁。</dd>
+    <dt>UIUX 缺</dt><dd class="bad">無法目視故不列具體缺點以免臆測。唯一可確認：對外只公開一組 email 與一支電話，B2B 洽詢入口不夠多元（未見線上即時客服或多部門聯絡方式）。</dd>
+    <dt>風格</dt><dd>未能直接視覺驗證，不予臆測。</dd>
+  </dl>
+  <p class="take"><b>最值得抄的一件事：</b>獨立設 Distribution 經銷申請頁 ＋ 首單折扣誘因做 B2B 導流——台灣官網的 trade account 申請頁可直接仿此骨架。</p>
+</div>
+
+<!-- 4 Canada -->
+<div class="card">
+  <div class="sitehead"><h3>04　Triangle Enterprises International Ltd.</h3><span class="flag">加拿大｜單頁形象站</span> <span class="pill pill-danger">反例</span></div>
+  <dl class="kv">
+    <dt>公司</dt><dd>加拿大亞伯達卡加利在地公司，2000-10 登記成立，11–50 人；官方國際經銷商名單列為加拿大代理（未標 exclusive）</dd>
+    <dt>連結</dt><dd><a href="https://vetopropac.ca">vetopropac.ca</a>｜sales@vetopropac.ca／403-230-1910｜244 41 Ave NE, Calgary, AB T2E 2N3</dd>
+    <dt>平台</dt><dd><b>WordPress 7.1 + Elementor 4.2.3</b>（單頁登陸頁，無電商層）<br><span class="small">依據：圖片路徑含 /wp-content/uploads/；無購物車特徵</span></dd>
+    <dt>前台結構</dt><dd>單頁式，導覽只有三項：Dealer Locator／Learn More（連回美國總站）／Contact Us；無分類、無站內搜尋、無商品頁——本站不賣貨，純品牌形象 ＋ 導流。</dd>
+    <dt>功能</dt><dd>僅經銷商地圖 ＋ 聯絡表單（頁面未直接顯示 email／電話）。無購物車、會員、多幣別、多語、尺寸指南、影片、評論、部落格；實際購物全部導向第三方經銷商或美國總站。</dd>
+    <dt>B2B 面</dt><dd>頁面上無任何 B2B／trade account／批發／月結入口；B2B 由總站的「Become a Veto Pro Pac Dealer」統一處理，加拿大站不自建。</dd>
+    <dt>UIUX 優</dt><dd class="good">1. 品牌識別（做舊風 logo ＋ 產品實拍）與總站調性一致。2. Dealer Locator 直接解決「哪裡買」的核心需求，路徑短。</dd>
+    <dt>UIUX 缺</dt><dd class="bad">1. 極簡到近乎空白，沒有商品展示也沒有內容深度，訪客停留無事可做。2. 聯絡資訊藏在表單後面，未直接列 email／電話，增加摩擦。3. 完全依賴外連總站，本站無法自證任何品牌權威或信任背書。</dd>
+    <dt>風格</dt><dd>極簡黑白工業風單頁，重 logo 與產品照、輕文字。</dd>
+  </dl>
+  <p class="take"><b>最值得抄的一件事（反向教訓）：</b>台灣站至少要做到「經銷商地圖 ＋ 公開聯絡資訊」這條底線，而非止步於這種近乎空殼的單頁。</p>
+</div>
+
+<!-- 5 EpicAir -->
+<div class="card">
+  <div class="sitehead"><h3>05　Epic Air Ltd</h3><span class="flag">英國｜通風本業 ＋ 代理線</span></div>
+  <dl class="kv">
+    <dt>公司</dt><dd>2007 年成立於英國肯特郡 Cranbrook，自建家用通風系統（MVHR）電商；VETO 為其代理商品線之一（官網列名授權經銷商，非獨家），主業仍是通風設備</dd>
+    <dt>連結</dt><dd><a href="https://www.epicair.co.uk">epicair.co.uk</a>｜info@epicair.co.uk（MVHR 另設 MVHR@epicair.co.uk）／01892 600121</dd>
+    <dt>平台</dt><dd><b>Shopify</b><br><span class="small">依據：Shop Pay／Apple Pay／Google Pay 付款圖示、cdn.shopify.com 資源網址、頁尾 Shopify 標準署名</span></dd>
+    <dt>前台結構</dt><dd>依產品線分類（Veto Bags／MVHR &amp; Central Ventilation／HVAC-R／Ducting, Filters, Fans／各品牌館 Testo、Javac、Zehnder 等）；VETO 系列頁再依用途細分（By Trade／Electrician／HVAC）；列表頁支援庫存與價格區間篩選、多種排序、分頁（183 件／8 頁，24/36/48 件切換）；單一 GBP 幣別。</dd>
+    <dt>功能</dt><dd>購物車 ＋ 會員登入註冊；商品卡含縮圖／副圖／SKU／庫存狀態／含稅價／簡述／快速檢視；部分商品內嵌影片；站內「MVHR Info Center」部落格 ＋ 技術文件下載（通風指南、法規）；服務諮詢表單；Trustpilot 評論。未見尺寸指南或會員專屬批發價。</dd>
+    <dt>B2B 面</dt><dd><b>站上無任何自助 trade account／批發入口</b>（全站 "trade account" 與 "wholesale" 皆為 0 命中）。「Veto VIP Club」實為頁尾一條外連 omniform1.com 的名單蒐集表單，屬行銷會員制而非 B2B 通路入口；批發條件須另行電洽。</dd>
+    <dt>UIUX 優</dt><dd class="good">1. 分類同時用「品類」與「職業別（By Trade／Electrician／HVAC）」雙軸，不同工種買家快速定位。2. 首頁整合自身核心通風主業與 VETO 代理雙線，內容行銷（Info Center）強化專業形象而非純賣貨。</dd>
+    <dt>UIUX 缺</dt><dd class="bad">1. B2B 只給聯絡方式、沒有自助申請流程或公開批發價，轉換路徑不明確。2. 單一 GBP 無多語／多幣別，對其宣稱服務的歐洲客戶不夠友善。</dd>
+    <dt>風格</dt><dd>實用型工具電商：白底 ＋ 品牌色塊分類卡，資訊密度高、功能導向而非精品感。</dd>
+  </dl>
+  <p class="take"><b>最值得抄的一件事：</b>Trustpilot 等第三方評論 ＋ 技術內容中心撐專業形象；但 B2B 只留電洽是它的短板，台灣站應在同一位置直接放自助申請表單一步到位。</p>
+</div>
+
+<!-- 6 Aspen group -->
+<div class="card">
+  <div class="sitehead"><h3>06　Javac ／ Aspen Pumps Group Ltd</h3><span class="flag">英國／歐洲｜品牌型錄站（無電商）</span></div>
+  <dl class="kv">
+    <dt>公司</dt><dd>英國 East Sussex Hailsham 總部，HVAC/R 專業工具與冷凝泵製造商，VETO 為其代理品牌之一（官方國際代理商名單列為英國／歐洲代理）</dd>
+    <dt>連結</dt><dd><a href="https://aspenpumps.com">aspenpumps.com</a>（en-GB）｜sales@aspenpumps.com／+44 (0)1323 848842｜Apex Way, Hailsham, East Sussex BN27 3WA</dd>
+    <dt>平台</dt><dd><b>自建 Next.js</b>（headless，Tailwind CSS／lucide icons）<br><span class="small">依據：資源路徑大量 "_next/"；class 帶 Tailwind utility 與 lucide-search 圖示；圖片走 /_next/image?url=…api/media/file…（自建 media API，非 Shopify CDN 或 wp-content）</span></dd>
+    <dt>前台結構</dt><dd>頂部導覽分 Products（依 Category 瀏覽）／Resources／Safety Data／News／Contact／BIM／Distributors；展開式搜尋框；首頁 Browse by Category 大圖磚導覽。</dd>
+    <dt>功能</dt><dd>產品分類頁／<b>BIM 圖檔下載（供規劃與工程單位）</b>／Safety Data（SDS）／News 文章／社群連結／多國站台與 Region Redirect（偵測訪客地區主動提示切換國家站）。<b>全站無購物車與結帳</b>，走「Where to Buy」導向經銷商，非直售電商。</dd>
+    <dt>B2B 面</dt><dd>有專屬 Wholesaler Information 頁 ＋ Distributors（Where to Buy）頁，代理與批發資訊獨立成頁；但非線上申請表單或會員式 trade account（未見月結／報價系統痕跡），屬「引導洽詢」而非自助式 B2B 電商。</dd>
+    <dt>UIUX 優</dt><dd class="good">1. 全球多國站共用同一套設計系統與 logo，僅換語系與地區內容，品牌統一。2. 地區自動偵測並友善提示切換站台，避免看錯地區資訊。3. BIM／Safety Data／Wholesaler Information 等專業資源獨立分類，服務對象明確。</dd>
+    <dt>UIUX 缺</dt><dd class="bad">1. 無購物車與結帳，小型買家無法直接下單，體驗停在型錄層級。2. 未見即時搜尋建議或型號比對等進階購物輔助。3. Trade／Wholesale 資訊僅靜態頁，缺線上申請與線上報價。</dd>
+    <dt>風格</dt><dd>工業品牌型錄風：深色與品牌色系 ＋ 大圖磚分類導覽，強調專業與資源下載而非零售體驗。</dd>
+  </dl>
+  <p class="take"><b>最值得抄的一件事：</b>用「Wholesaler Information ＋ Distributors」兩個獨立頁把 B2B 資訊做成專屬入口，讓批發客一眼找到門，不必在零售頁面裡繞。</p>
+</div>
+
+<!-- 7 Beesleys -->
+<div class="card">
+  <div class="sitehead"><h3>07　Beesleys Tools Ltd（Tool-Shop.co.uk）</h3><span class="flag">英國｜百年五金行電商</span></div>
+  <dl class="kv">
+    <dt>公司</dt><dd>1920 年代創立於英國 Swindon 的百年五金工具行，主業零售／批發手工具與電動工具 ＋ 維修服務，為 VETO 英國授權經銷商之一</dd>
+    <dt>連結</dt><dd><a href="https://www.tool-shop.co.uk">tool-shop.co.uk</a>｜beesleys@tool-shop.co.uk／+44 1793 525233（門市 01793 538847）｜1 Beatrice Street, Swindon SN2 1BB</dd>
+    <dt>平台</dt><dd><b>osCommerce 4.0</b>（開源電商的現代重寫版，非 2.x 老版；亦非 Shopify／WordPress）<br><span class="small">依據：<code>&lt;meta name="generator" content="osCommerce 4.0"&gt;</code> 明載；頁尾 "Powered by osCommerce"。<b>把關修正：先前記為 osCommerce 舊版並指其非響應式，已更正並撤回該項缺點。</b></span></dd>
+    <dt>前台結構</dt><dd>傳統分類式導覽（Hand Tools／Power Tools／Accessories／<b>Veto Tool Bags</b>／Special Offers），Hand Tools 再細分 Woodworking／Screwdriving／Measuring／Hammers／Pliers 等多層子分類；站內搜尋與帳號為 osCommerce 標準樣式。</dd>
+    <dt>功能</dt><dd>商品目錄／購物車／會員登入／運費選項（£6 標準、DPD 免運）／SecurityMetrics 安全認證標章／維修服務頁。無多幣別、多語，未見尺寸指南、影片、評論等進階內容。</dd>
+    <dt>B2B 面</dt><dd>未見獨立 B2B／trade account、批發或月結申請入口；定位偏零售 ＋ 實體店面與維修服務，無明顯批發報價流程。</dd>
+    <dt>UIUX 優</dt><dd class="good">1. 分類與子分類清楚、專業品項齊全，<b>VETO 有獨立 Tool Bags 專區</b>。2. 頁尾清楚列出實體地址、電話、營業時間，信任感足。3. 首頁強調「25+ Years Online」與安全認證，建立老字號信譽。</dd>
+    <dt>UIUX 缺</dt><dd class="bad">1. 平台視覺與互動落後現代電商標準。2. 無 B2B／經銷申請或批發報價流程，對工程／工班大宗採購不友善。3. 商品頁缺尺寸指南、影片、評論，信任建立仰賴品牌本身而非站內內容。</dd>
+    <dt>風格</dt><dd>傳統實用型工具電商，資訊導向多於視覺設計，走「老字號五金行」風格。</dd>
+  </dl>
+  <p class="take"><b>最值得抄的一件事：</b>別學平台本身，該抄的是「VETO 給獨立專區 ＋ 實體門市與維修服務做信任背書」——台灣有實體展示店，這條可直接複製。</p>
+</div>
+
+<!-- 8 Pronet -->
+<div class="card">
+  <div class="sitehead"><h3>08　Pronet ehf</h3><span class="flag">冰島｜資通訊經銷商兼售 VETO</span></div>
+  <dl class="kv">
+    <dt>公司</dt><dd>冰島 Kópavogur 資通訊基礎設施經銷商（光纖／網通／CCTV／門禁／UPS／機櫃），VETO 工具袋列為官網主打品牌之一，形容為「工匠包界的 Gucci」；成立年與代理年資未公開</dd>
+    <dt>連結</dt><dd><a href="https://verslun.pronet.is">verslun.pronet.is</a>｜pronet@pronet.is（來源：Já.is 商業登記；官網未直接刊登）｜Ögurhvarf 8, 203 Kópavogur</dd>
+    <dt>平台</dt><dd><b>VirtueMart（Joomla 電商元件）</b><br><span class="small">依據：圖片路徑含 /images/stories/virtuemart/product/，符合 Joomla + VirtueMart 典型結構</span></dd>
+    <dt>前台結構</dt><dd>單一冰島語；約 30+ 層產品分類導覽 ＋ 搜尋功能；未見多語切換。</dd>
+    <dt>功能</dt><dd>購物車、批發專區「Heildsala」、分類搜尋；未見會員系統、多幣別、尺寸指南、影片、評論、門市地圖等進階功能（官網資訊有限，未逐一驗證）。</dd>
+    <dt>B2B 面</dt><dd>有獨立「Heildsala（批發）」與「Tæknideild（技術部）」分區，顯示有 B2B 通路；但經銷申請、月結、報價機制細節官網未載明，<b>需進一步查證</b>。</dd>
+    <dt>UIUX 優</dt><dd class="good">1. VETO 商品獨立陳列並用行銷語言（Gucci 比喻）強化品牌調性。2. 依產業別（網通／安控／電力／智慧家庭）分類清晰，符合 B2B 採購者找貨邏輯。</dd>
+    <dt>UIUX 缺</dt><dd class="bad">1. 老舊 Joomla／VirtueMart 平台，前端體感落後現代站台。2. 單一冰島語無多語支援。3. 官網未刊登聯絡資訊，B2B 詢價入口不明顯。</dd>
+    <dt>風格</dt><dd>傳統型錄式電商，資訊密度高、視覺樸實，偏工業批發風。</dd>
+  </dl>
+  <p class="take"><b>最值得抄的一件事：</b>把 VETO 獨立設專區並用有記憶點的行銷語言包裝（「工匠包界的 Gucci」），比單純上架更能建立品牌質感。</p>
+</div>
+
+<!-- 9 Sangbo -->
+<div class="card">
+  <div class="sitehead"><h3>09　Sang-Bo Corporation（상보기업）</h3><span class="flag">南韓｜會員制 B2B 訂貨網</span></div>
+  <dl class="kv">
+    <dt>公司</dt><dd>1987 年創立於首爾，53 人規模的工業五金／量測工具製造與經銷商，主力自有品牌鋁製水平尺與捲尺，並代理多國品牌手工具（含 VETO）；ISO 9001 認證；設首爾、光州、釜山三處據點</dd>
+    <dt>連結</dt><dd><a href="http://sangbo.co.kr/eng/index.php">sangbo.co.kr</a>／B2B 訂貨網 <a href="http://yes09.sangbo.co.kr/">yes09.sangbo.co.kr</a>｜trade@sangbo.co.kr／+82-2-2068-0381</dd>
+    <dt>平台</dt><dd><b>自建系統（JSP-based B2B 訂貨平台）</b><br><span class="small">依據：商品連結為 ecatalog5.jsp、/list?page=&amp;deal=&amp;clsL=… 等客製參數；全站無 cdn.shopify.com、wp-content、Cafe24 等字串，頁尾亦無「호스팅제공」代管標示（對照：南韓零售商 coolingtool.co.kr 為 Cafe24 代管，頁尾明確標示）</span></dd>
+    <dt>前台結構</dt><dd>分類（카테고리）＋ 品牌（브랜드）雙軸導覽；首頁多組促銷輪播 banner；擷取內容中未見明顯搜尋框或購物車圖示。</dd>
+    <dt>功能</dt><dd>品牌牆（TAJIMA／KNIPEX／ZIRCON／EDMA 等 12 大品牌圖標捷徑）／新商品與特價專區／電子型錄 ebook／三地分公司資訊／需會員登入才能看報價與下單。未見多幣別、多語、尺寸指南、影片、評論。</dd>
+    <dt>B2B 面</dt><dd>yes09 站本身即公司獨立 B2B 訂貨入口：訪客看不到價、須會員帳號才能報價下單，屬典型會員制批發訂貨網。<b>VETO 品牌在 yes09 站內未見陳列</b>——南韓實際是透過在地零售通路銷售（如 coolingtool.co.kr，售價約 297,000 韓元／個），顯示 Sang-Bo 對 VETO 走傳統經銷鋪貨而非官網直營電商。</dd>
+    <dt>UIUX 優</dt><dd class="good">1. 品牌牆讓買家一鍵依品牌篩選，適合工具型錄型網站。2. 提供電子型錄 ebook，方便批量瀏覽、列印與外部分享。3. 新商品／特價分區明確且更新頻繁。</dd>
+    <dt>UIUX 缺</dt><dd class="bad">1. 商品縮圖多指向空連結或需登入才可見報價，訪客無法自助比價。2. 版面偏舊、密集小圖堆疊缺留白與層級，行動友善度存疑。3. 未見明顯全站搜尋列或購物車圖示，逛選與下單流程不直覺。</dd>
+    <dt>風格</dt><dd>產業型錄風：密集商品縮圖 ＋ 品牌牆 ＋ 促銷輪播，功能導向、無強烈品牌美學。</dd>
+  </dl>
+  <p class="take"><b>最值得抄的一件事：</b>品牌牆快速篩選 ＋ 會員報價入口值得參考；但「訪客完全看不到價」這點台灣站不宜照搬——B2C 一律明碼，只有經銷價才藏在登入後。</p>
+</div>
+
+<!-- 10 OrShy -->
+<div class="card">
+  <div class="sitehead"><h3>10　M.C. Or Shy Ltd（אור שי）</h3><span class="flag">以色列｜技術型 B2B 目錄站</span> <span class="pill pill-danger">品牌被淹沒</span></div>
+  <dl class="kv">
+    <dt>公司</dt><dd>1987 年創立的以色列冷凍空調零組件專業經銷商（暖通、製冷、不鏽鋼配件為主業），1991 併購 Moshe Hayon Ltd 擴大；VETO 僅為眾多代理品牌之一，官網未載明是否獨家或代理年資</dd>
+    <dt>連結</dt><dd><a href="https://www.orshy.co.il/">orshy.co.il</a>｜+972-3-5583303｜16 Hasatat/Hapeled St., Industrial Zone, Holon 5885531（官網未刊 email，僅表單）</dd>
+    <dt>平台</dt><dd><b>WordPress + WooCommerce</b><br><span class="small">依據：URL 結構 /product-category/… 與 /en/manufacturer/veto_pro_pac-en/（WooCommerce manufacturer taxonomy）；購物車與會員登入頁為 WooCommerce 標準型態</span></dd>
+    <dt>前台結構</dt><dd>分類以冷凍／空調／通風／不鏽鋼／化學品／五金為主軸，VETO 歸在「工具袋」子分類與品牌頁；有站內搜尋、EN／HE 雙語切換。</dd>
+    <dt>功能</dt><dd>會員註冊登入（<b>需登入才能下載技術規格與型錄 PDF</b>）／站內搜尋／雙語／廠牌分類頁／產品型錄 PDF 下載（含 2024 VETO 完整型錄）。VETO 商品頁<b>不顯示價格、無加入購物車</b>，以型號／描述／廠牌／產地／圖片 ＋ PDF 的清單式呈現，偏技術資料查詢而非零售流程。</dd>
+    <dt>B2B 面</dt><dd>明顯偏 B2B：官網強調「以色列大小經銷商、工廠、技師的首選品牌」，技術資料須註冊登入才能下載；VETO 商品線刻意不掛價、不設購物車，走詢價與業務接洽。<b>與台灣要服務終端消費者的 B2C 路線相反，僅供設計參考。</b></dd>
+    <dt>UIUX 優</dt><dd class="good">1. 廠牌（manufacturer）獨立分類頁把 VETO 所有品項集中好找。2. 型錄 PDF 一鍵下載，省去逐項查規格。3. 會員登入分流 B2B 詢價與一般瀏覽。</dd>
+    <dt>UIUX 缺</dt><dd class="bad">1. VETO 完全不顯示價格且無購物車，消費者只能被動詢價，轉換路徑長。2. 表格式清單缺產品圖放大與多角度展示，商品吸引力弱。3. VETO 被淹沒在冷凍空調為主的龐雜分類架構中，品牌識別度低。</dd>
+    <dt>風格</dt><dd>工業技術型 B2B：資訊密度高、以型錄表格與 PDF 規格為主，視覺行銷成分低。</dd>
+  </dl>
+  <p class="take"><b>最值得抄的一件事：</b>用獨立品牌分類頁集中 VETO 全系列 ＋ 型錄 PDF 一鍵下載，方便經銷商與工程客查規格。</p>
+</div>
+
+<!-- 11 G7 -->
+<div class="card">
+  <div class="sitehead"><h3>11　G7 Tools Co., Ltd</h3><span class="flag">越南｜隱藏價格的詢價型電商</span></div>
+  <dl class="kv">
+    <dt>公司</dt><dd>越南本土工具進口零售商，2017 年成立，經營德瑞日美進口手工具（Knipex／Wera／PB Swiss／Stahlwille 等），VETO 為代理品牌之一（非獨家）；總部同奈省邊和市，胡志明市與河內設實體門市</dd>
+    <dt>連結</dt><dd><a href="https://g7tools.com/">g7tools.com</a>｜nancy.phung@g7tools.com／0981 222 034</dd>
+    <dt>平台</dt><dd><b>Sapo</b>（越南本土電商 SaaS）<br><span class="small">依據：頁尾「Cung cấp bởi Sapo」字樣；商品縮圖為 base64 GIF placeholder，屬 Sapo 樣板常見寫法</span></dd>
+    <dt>前台結構</dt><dd>階層式選單，VETO 歸在「MADE IN G7」大分類下，另有 BA LÔ VETO（工具背包）、VETO GO EDC、OPS &amp; INFRARED 等子分類；分類頁有篩選但無明確排序細節。</dd>
+    <dt>功能</dt><dd>購物車 ＋ 會員登入註冊；單一越南語；部落格／新聞（近期至 2025-11）；<b>實體門市地圖（胡志明市、河內）</b>；<b>商品清單頁完全不顯示價格</b>；頁尾含保固／付款／物流政策與社群連結（Facebook、YouTube、Zalo）。</dd>
+    <dt>B2B 面</dt><dd>未見獨立經銷申請、trade account 或月結頁面；隱藏價格 ＋ 須詢價是典型 B2B 訊號，但沒有正式化的批發申請流程或線上報價系統。</dd>
+    <dt>UIUX 優</dt><dd class="good">1. 品牌分類清楚，VETO 有獨立子分類。2. 實體門市地圖建立信任感。3. 部落格內容行銷帶自然流量。</dd>
+    <dt>UIUX 缺</dt><dd class="bad">1. 完全隱藏價格但無明確「登入看價／詢價」引導，流程不透明。2. 商品圖用 base64 placeholder，載入體驗差。3. 純越南語無多語。</dd>
+    <dt>風格</dt><dd>傳統東南亞電商樣板風格，功能導向、視覺不特別精緻。</dd>
+  </dl>
+  <p class="take"><b>最值得抄的一件事：</b>「門市地圖建立專業信任感」可抄；但隱藏價格要配明確的詢價按鈕，別讓買家自己猜。</p>
+</div>
+
+<!-- 12 Turkey -->
+<div class="card">
+  <div class="sitehead"><h3>12　Acenersis ／ Roda Elektronik Ltd. Şti.</h3><span class="flag">土耳其｜多品牌工業型錄站</span> <span class="pill pill-clay">3 筆重複已合併</span></div>
+  <dl class="kv">
+    <dt>公司</dt><dd>土耳其安卡拉工業測試／量測／電力設備 B2B 經銷商，代理 30–40+ 國際品牌，VETO 工具袋僅其中一條線（非核心業務）；與 VETO 的合作年限與是否獨家未查得</dd>
+    <dt>連結</dt><dd><a href="https://www.acenersis.com">acenersis.com</a>（VETO 專區 /veto-pro-pac-el-aleti-takim-cantalari-52-temsilcilik.html）｜info@acenersis.com／+90 312 346 69 94</dd>
+    <dt>平台</dt><dd><b>客製自建 PHP 站</b>（server-rendered，非 Shopify／WordPress／Magento）<br><span class="small">依據：URL 型態為 slug-數字-temsilcilik.html（代理品牌頁）與 slug-數字-urun.html（產品頁）；無 cdn.shopify.com／wp-content／magento 字串；頁尾掛設計公司名（Çekirdek Bilişim），頁尾版權標示 © 2019</span></dd>
+    <dt>前台結構</dt><dd>頂部導覽：首頁／關於我們／產品（70+ 子分類下拉）／服務／代理品牌（Temsilcilikler）／新聞／聯絡；有麵包屑；VETO 品牌頁採 12 格產品縮圖網格 ＋ 分頁（1–4 頁）；<b>未見站內搜尋框</b>。</dd>
+    <dt>功能</dt><dd>純土耳其語單語；<b>無購物車、無標價、無線上結帳</b>；提及 Login 選項但無明顯會員入口；無商品評論、尺寸指南、影片；有新聞／技術文章區；有 KVKK（土耳其版個資法）隱私聲明。本質是 B2B 名單開發型錄站，非交易型電商。</dd>
+    <dt>B2B 面</dt><dd>走詢價制；未發現獨立經銷申請、trade account 或批發報價表單，聯絡僅靠 /iletisim.html 表單頁——<b>首頁、頁尾、品牌頁均查不到明碼電話與 email</b>（本表所列聯絡資訊來自 VETO 官方經銷商頁，非其官網）。</dd>
+    <dt>UIUX 優</dt><dd class="good">1. 用單一「代理品牌」入口統整 30+ 品牌，VETO 有獨立品牌頁不被淹沒在雜項分類裡。2. 麵包屑與分頁齊備，品項多仍可追蹤位置。3. 品牌清單本身建立多品牌工業供應商的可信度。</dd>
+    <dt>UIUX 缺</dt><dd class="bad">1. 聯絡資訊完全藏在表單頁，B2B 客戶想快速聯繫很卡。2. 純土耳其語無多語、無搜尋框，70+ 分類要逐層點找。3. 分類頁不顯示價格且無購物車，購買動線不明。</dd>
+    <dt>風格</dt><dd>土耳其 B2B 工業經銷商型錄樣板：深色導覽 ＋ 白底 ＋ 低彩度，實拍縮圖為主視覺，無 VETO 專屬視覺識別。</dd>
+  </dl>
+  <p class="take"><b>最值得抄的一件事：</b>品牌獨立 landing 頁值得抄，但聯絡方式務必明碼放在頁首／頁尾，不要只藏在表單頁。</p>
+</div>
+
+<!-- 13 MinThong -->
+<div class="card">
+  <div class="sitehead"><h3>13　Min Thong Supplies Limited Partnership</h3><span class="flag">泰國｜LINE 導購型目錄站</span> <span class="pill pill-warn">站上 0 個 VETO 品項</span></div>
+  <dl class="kv">
+    <dt>公司</dt><dd>泰國曼谷 Nong Chok 區工業機械零件（挖土機履帶、齒輪、刀刃等）進口經銷商，自 1996 年起經營逾 20 年，核心業務非手工具</dd>
+    <dt>連結</dt><dd><a href="https://www.minthong.com/th">minthong.com</a>｜Minthong_TH@hotmail.com／02-989-4628（12 線代表號）／LINE 官方 @minthong</dd>
+    <dt>平台</dt><dd><b>iGetWeb.com</b>（泰國本地建站 SaaS）<br><span class="small">依據：頁尾「Powered by iGetWeb.com」；圖片主機 cache-igetweb-v2.mt108.info、cdn.igetweb.com；會員路徑 /th/members/register</span></dd>
+    <dt>前台結構</dt><dd>傳統選單（首頁／產品目錄／關於我們／相簿／聯絡我們／徵才）；產品分類頁 /products/category/…；有站內搜尋但無明顯篩選器；純泰文無多語。</dd>
+    <dt>功能</dt><dd>會員登入註冊／Facebook 登入／<b>LINE 官方帳號購物導購（含 QR code）</b>／產品目錄頁（<b>無購物車與線上結帳</b>，商品頁按鈕為「聯繫經銷商」）／新聞與產品知識文／社群連結／地圖與 12 線客服電話。</dd>
+    <dt>B2B 面</dt><dd>未見任何經銷申請、trade account、批發報價或月結頁面；詢價與訂購全導向 LINE@ 或電話，屬傳統人工詢價模式。</dd>
+    <dt>UIUX 優</dt><dd class="good">1. LINE 官方帳號一鍵導購 ＋ QR code，貼合在地慣用通訊軟體的下單習慣。2. 多支客服電話 ＋ 即時通訊圖示常駐頁角，聯絡入口非常顯眼。</dd>
+    <dt>UIUX 缺</dt><dd class="bad">1. 純目錄無購物車，B2B 流程完全依賴人工。2. 純泰文無多語。3. 圖片走第三方快取 CDN 載入慢，且無規格／尺寸／庫存等結構化資訊。</dd>
+    <dt>風格</dt><dd>傳統泰式 B2B 工業品錄型網站，資訊密集、素人風格。</dd>
+  </dl>
+  <div class="danger-note" style="margin:10px 0 0;"><b>把關警語：</b>該站全站未上架任何 VETO 品項（首頁 veto=0，站內搜尋 /th/search?keyword=veto 亦為 0），<b>僅為官方名單上的代理主體，不宜當作 VETO 代理站的 UIUX 參考案例</b>。下方 takeaway 僅取其通用做法。</div>
+  <p class="take"><b>最值得抄的一件事：</b>用 LINE 官方帳號做即時詢價與下單入口，貼合當地慣用通訊軟體降低下單門檻——這一點台灣完全適用。</p>
+</div>
+
+<!-- 14 Arvo -->
+<div class="card">
+  <div class="sitehead"><h3>14　Arvo Aircond &amp; Refrigeration Tools Supply Sdn Bhd</h3><span class="flag">馬來西亞｜多品牌目錄型電商</span></div>
+  <dl class="kv">
+    <dt>公司</dt><dd>雪蘭莪 Shah Alam 冷凍空調工具經銷商，多品牌代理（VETO／Supco／Tasco／Idemitsu 等），非 VETO 獨家；產品線橫跨印尼、新加坡、汶萊、泰國、越南、菲律賓等市場</dd>
+    <dt>連結</dt><dd><a href="https://www.arvotools.com.my">arvotools.com.my</a>｜enquiry@arvotools.com.my／+6016-615 9826｜週一至週五 8:30–17:30</dd>
+    <dt>平台</dt><dd><b>無法確認（研判為客製化目錄型自建站）</b>，非 Shopify／WordPress／Magento／Wix<br><span class="small">依據：URL 結構 /showproducts/productid/xxx/cid/xxx/、/ourproducts/、/category/cid/…、/checkout/、/login/、/contactus/，屬馬來西亞常見客製 B2B 目錄樣板；<b>首頁與商品頁兩次 WebFetch 皆被導向 Cloudflare 類「Checking your browser」驗證頁，無法取得 HTML 逐一比對</b></span></dd>
+    <dt>前台結構</dt><dd>由 URL 結構推測：有分類導覽、商品頁、會員登入、購物車結帳，具備基本 B2C 電商框架；實際版面、搜尋、選單細節因 bot-check 擋下<b>無法目視確認</b>。</dd>
+    <dt>功能</dt><dd>會員登入／購物車與結帳／依 cid 分類的產品頁／聯絡頁；VETO 商品頁列出多款型號（Tech Pac、DP3、TP-XL、SC45、TP-XXL Blackout、MB 等）並標示「5-year warranty」。多語系、多幣別、影片、評論等進階特徵<b>無證據，不臆測</b>。</dd>
+    <dt>B2B 面</dt><dd>無法確認是否有獨立經銷申請或批發報價流程；站點結構看似單一 B2C 商店模式（購物車直接結帳），未見明顯 B2B 專屬入口，需人工瀏覽器實測才能確認。</dd>
+    <dt>UIUX 優</dt><dd class="good">1. 分類以 cid 分流清楚，SEO 型網址帶地區關鍵字（Selangor／Shah Alam／KL），利於在地搜尋。2. 有會員登入與購物車，具基本自助下單能力。3. VETO 商品頁明列 5 年保固，建立信任。</dd>
+    <dt>UIUX 缺</dt><dd class="bad">1. Cloudflare／bot-check 攔截層可能擋到一般使用者首次進站與搜尋引擎索引。2. 非 VETO 專屬站，品牌混雜在 Supco／Tasco／Idemitsu 多品牌目錄中，識別度低。3. 網址結構偏老式參數型樣板，觀感陽春。</dd>
+    <dt>風格</dt><dd>傳統馬來西亞中小企業型錄式 B2B/B2C 電商，功能導向、非品牌質感導向。</dd>
+  </dl>
+  <p class="take"><b>最值得抄的一件事（反向教訓）：</b>台灣官網要避免代理商常見的「多品牌雜燴目錄」感——讓 VETO 獨立品牌館 ＋ 清楚的保固與認證資訊成為信任錨點。</p>
+</div>
+
+<!-- 15 Travers -->
+<div class="card">
+  <div class="sitehead"><h3>15　Travers Tool México</h3><span class="flag">墨西哥｜Magento 工業五金站</span></div>
+  <dl class="kv">
+    <dt>公司</dt><dd>Travers Tool Co., Inc.（美國紐約 Flushing，1924 創立）在墨西哥的子公司，據點 Monterrey／Querétaro；工業五金、量測、耗材經銷商，庫存 33,000+ 品項，VETO 為代理品牌之一（官網未標獨家）</dd>
+    <dt>連結</dt><dd><a href="https://www.travers.com.mx/">travers.com.mx</a>｜yaravi.cardozo@travers.com.mx／+52 442-209-6600</dd>
+    <dt>平台</dt><dd><b>Magento</b>（已確認）</dd>
+    <dt>前台結構</dt><dd>下拉式分類選單（50+ 產品線，VETO 歸 hand tools）／語言切換 Español–English／會員登入註冊／購物車圖示；搜尋功能存在，但<b>站上意見回饋表單自曝「El buscador no funciona」（搜尋器故障）</b>。</dd>
+    <dt>功能</dt><dd>加入購物車／會員系統／中英雙語；VETO 產品頁（如 Tech Pac MC 後背包）有獨立 SKU 頁與商品圖，但未見尺寸指南、影片、評論或關聯商品區塊；未見門市地圖或多幣別。</dd>
+    <dt>B2B 面</dt><dd>導覽與商品頁均未見經銷申請、trade account、報價系統、批發價或月結入口——B2B 在前台不明顯，可能走業務窗口線下報價。<b>對台灣要做 B2B ＋ B2C 雙軌而言，這正是差異化機會。</b></dd>
+    <dt>UIUX 優</dt><dd class="good">1. 分類樹深且完整（工業五金全品類），適合重度採購型買家瀏覽找貨，不完全依賴搜尋。2. 中英雙語切換降低跨境買家門檻。</dd>
+    <dt>UIUX 缺</dt><dd class="bad">1. 搜尋功能故障（官方自家意見表單都在抱怨），對非採購背景的一般消費者是硬傷。2. 產品頁資訊單薄（無評論、影片、尺寸指南），工具袋這種「要摸得到質感」的品類特別吃虧。3. B2B 入口不透明，未把批發客導流到明確窗口。</dd>
+    <dt>風格</dt><dd>工業型錄式（Magento 預設架構 ＋ 深分類樹），偏功能導向、視覺陽春。</dd>
+  </dl>
+  <p class="take"><b>最值得抄的一件事（反向教訓）：</b>先顧好搜尋能不能用，再談其他——這是最基本的電商門檻，驗收清單第一條。</p>
+</div>
+
+<!-- 16 Olifor -->
+<div class="card">
+  <div class="sitehead"><h3>16　澳立福實業有限公司 Olifor Enterprise Co., Ltd.</h3><span class="flag">台灣｜無自有官網</span> <span class="pill">本案主體</span></div>
+  <dl class="kv">
+    <dt>公司</dt><dd>台中太平區貿易商，2005-10-20 設立、資本額 NT$500 萬、負責人許志豪（統編 28012506）；主業為義大利 IMF SRL 對流式烘豆機進口與整廠烘豆廠設計，<b>VETO 工具袋為第二條產品線</b></dd>
+    <dt>連結</dt><dd>無自有官網。現行對外通路：<a href="https://www.facebook.com/VETO.PRO.PAC.TAIWAN/">FB 專頁「VETO PRO PAC TAIWAN」</a>（3,586 讚，Reels 單支觸及 2K–11K）／蝦皮賣場 shop 826388878（標示「台灣總代理現貨」）／北台灣官方認證展示店</dd>
+    <dt>平台</dt><dd><b>無</b>（unreachable）<br><span class="small">依據：VETO 官方國際經銷商頁僅列公司名稱與聯絡方式，未附網址；多輪搜尋亦無專屬 VETO 官網或線上商店。FB 專頁的官網欄位只能指向美國總站</span></dd>
+    <dt>聯絡</dt><dd>0979-120-333／olifor@me.com／04-2395-7172（Fax 04-2395-7767）｜官方頁刊登地址：台中市太平區怡昌東路 107 號；商工登記地址：台中市太平區立德街 99 號 1 樓（<b>兩址並存，接洽前先確認現行辦公地</b>）</dd>
+    <dt>現況判讀</dt><dd>流量與信任基礎已經存在（社群 ＋ 賣場 ＋ 實體展示店），缺的是把三者收攏起來的品牌落地頁、可信的經銷商地圖，以及一個能讓工班客戶月結下單的 B2B 後台。</dd>
+  </dl>
+  <p class="take"><b>最值得抄的一件事：</b>合作夥伴目前無自有官網，但社群、賣場與實體展示店都在運作——<b>台灣官網要做的是把既有流量接住，而非從零拉新</b>：品牌落地頁 ＋ 經銷商地圖 ＋ B2B 月結後台三件事。</p>
+</div>
+
+<!-- 17 Nantong -->
+<div class="card">
+  <div class="sitehead"><h3>17　Nantong Yingfeige Trading Co., Ltd（南通盈丰阁贸易）</h3><span class="flag">中國｜查無官網</span></div>
+  <dl class="kv">
+    <dt>公司</dt><dd>江蘇南通海門區小型貿易公司，僅見於 VETO 官方代理商名單；無獨立官網或電商店鋪，公司規模與成立時間無法確認，經銷關係與時長未公開揭露</dd>
+    <dt>連結</dt><dd>查無。<span class="small">多輪搜尋中國稅務／工商公開資料庫、Alibaba、1688 均未命中「Yingfeige」或可能對應之中文名，判斷為無自建網站或未公開的小型貿易商</span></dd>
+    <dt>聯絡</dt><dd>2545437196@qq.com／18778017263（微信）｜江蘇省南通市海門區包場鎮呂家街 66 號<br><span class="small">以上均取自 VETO 官方國際代理商頁，非該公司自有網站</span></dd>
+    <dt>各面向</dt><dd>前台結構／功能／B2B／UIUX／風格：<b>無可評估（查無官網）</b>。</dd>
+  </dl>
+  <p class="take"><b>最值得抄的一件事：</b>此代理商無官網可供借鏡，本案無「最值得抄」的發現。</p>
+</div>
+
+<!-- ============ 5 ============ -->
+<h2 id="s5">5. 建站模式歸納</h2>
+
+<h3>5.1 他們都用什麼平台</h3>
+<p class="small">下表為 &sect;4 深研的 18 站全列（土耳其 Acenersis 之 3 筆重複紀錄已合併為 1 筆）。「建站系統」欄以 &sect;2.3 把關抽驗更正後為準&mdash;&mdash;VETO 官方站為 <b>WordPress + WooCommerce</b>（非 Shopify）、tool-shop 為 <b>osCommerce 4.0 且具響應式</b>、travers 之 Magento 已由「研判」升為確認。</p>
+<div class="tblwrap">
+<table style="min-width:1180px;">
+<thead><tr><th>國家</th><th>代理商／公司</th><th>型態</th><th>官網</th><th>建站系統</th><th>判斷證據</th></tr></thead>
+<tbody>
+<tr><td style="white-space:nowrap;">美國</td><td>VETO Pro Pac（品牌本站，非代理商）</td><td class="small">品牌自營總站</td><td style="white-space:nowrap;"><a href="https://vetopropac.com">vetopropac.com</a></td><td>WordPress + WooCommerce（GeneratePress ＋ WPBakery）</td><td class="small">把關重抓首頁 373KB：wp-content 183、woocommerce 145、cdn.shopify.com 0，頁面含 Cart 與 $0.00</td></tr>
+<tr><td style="white-space:nowrap;">日本</td><td>LABAVO LLC（ラバボ合同会社）</td><td class="small">代理商自營品牌站</td><td style="white-space:nowrap;"><a href="https://vetopropac-japan.com">vetopropac-japan.com</a></td><td>Shopify</td><td class="small">資源路徑走 cdn.shop/files/；把關複驗 Shopify 指紋與 Judge.me 評論屬實</td></tr>
+<tr><td style="white-space:nowrap;">澳洲</td><td>Aspen Pumps Asia Pacific Pty Ltd</td><td class="small">代理商為品牌另開子站</td><td style="white-space:nowrap;"><a href="https://www.vetopropac.com.au/">vetopropac.com.au</a></td><td>WordPress + WooCommerce</td><td class="small">前次快照 wp-content 206、woocommerce 160、加購連結 ?add-to-cart=；本次複驗遭 Cloudflare 403 未能重抓</td></tr>
+<tr><td style="white-space:nowrap;">紐西蘭</td><td>Premium Tools (NZ) Limited</td><td class="small">代理商自營品牌站</td><td style="white-space:nowrap;"><a href="https://www.vetopropac.co.nz/">vetopropac.co.nz</a></td><td>WordPress + WooCommerce（研判）</td><td class="small">Cloudflare 擋下原始碼，由 /product/、/product-category/、/product-tag/ 之 permalink 結構研判，信心中等</td></tr>
+<tr><td style="white-space:nowrap;">加拿大</td><td>Triangle Enterprises International Ltd.</td><td class="small">單頁形象站（無電商層）</td><td style="white-space:nowrap;"><a href="https://vetopropac.ca">vetopropac.ca</a></td><td>WordPress 7.1 + Elementor 4.2.3</td><td class="small">generator meta 兩行分別標 WordPress 7.1 與 Elementor 4.2.3，wp-content 59，全站無 cart／checkout</td></tr>
+<tr><td style="white-space:nowrap;">英國</td><td>Epic Air Ltd</td><td class="small">通風本業 ＋ 代理線電商</td><td style="white-space:nowrap;"><a href="https://www.epicair.co.uk">epicair.co.uk</a></td><td>Shopify</td><td class="small">把關重抓 shopify 指紋 220 次，含 Shop Pay／Apple Pay 圖示與頁尾 Shopify 署名</td></tr>
+<tr><td style="white-space:nowrap;">英國／歐洲</td><td>Javac ／ Aspen Pumps Group Ltd</td><td class="small">品牌型錄站（無電商）</td><td style="white-space:nowrap;"><a href="https://aspenpumps.com">aspenpumps.com</a></td><td>自建 Next.js（headless，Tailwind CSS）</td><td class="small">資源路徑大量 _next/，圖片走 /_next/image?url=…api/media/file；把關確認全站 0 個 cart／checkout</td></tr>
+<tr><td style="white-space:nowrap;">英國</td><td>Beesleys Tools Ltd（Tool-Shop.co.uk）</td><td class="small">百年五金行電商</td><td style="white-space:nowrap;"><a href="https://www.tool-shop.co.uk">tool-shop.co.uk</a></td><td>osCommerce 4.0</td><td class="small">generator meta 明載 osCommerce 4.0；把關重抓 400KB 確認含 viewport、bootstrap 17 次、@media 46 條</td></tr>
+<tr><td style="white-space:nowrap;">冰島</td><td>Pronet ehf</td><td class="small">資通訊經銷商兼售 VETO</td><td style="white-space:nowrap;"><a href="https://verslun.pronet.is">verslun.pronet.is</a></td><td>Joomla + VirtueMart</td><td class="small">圖片路徑含 /images/stories/virtuemart/product/，為 Joomla ＋ VirtueMart 典型結構</td></tr>
+<tr><td style="white-space:nowrap;">南韓</td><td>Sang-Bo Corporation（상보기업）</td><td class="small">會員制 B2B 訂貨網</td><td style="white-space:nowrap;"><a href="http://sangbo.co.kr/eng/index.php">sangbo.co.kr ／ yes09.sangbo.co.kr</a></td><td>自建系統（JSP B2B 訂貨平台）</td><td class="small">商品連結為 ecatalog5.jsp 等客製參數，全站無 Shopify／wp-content／Cafe24 字串，頁尾亦無平台代管標示</td></tr>
+<tr><td style="white-space:nowrap;">以色列</td><td>M.C. Or Shy Ltd（אור שי）</td><td class="small">技術型 B2B 目錄站</td><td style="white-space:nowrap;"><a href="https://www.orshy.co.il/">orshy.co.il</a></td><td>WordPress 6.8.2 + WooCommerce 10.1.2</td><td class="small">把關重抓確認版本；URL 為 /product-category/ 與 /manufacturer/veto_pro_pac-en/ 之 WooCommerce taxonomy</td></tr>
+<tr><td style="white-space:nowrap;">越南</td><td>G7 Tools Co., Ltd</td><td class="small">隱藏價格的詢價型電商</td><td style="white-space:nowrap;"><a href="https://g7tools.com/">g7tools.com</a></td><td>Sapo（越南本土電商 SaaS）</td><td class="small">頁尾標「Cung cấp bởi Sapo」，商品縮圖為 base64 GIF placeholder，屬 Sapo 樣板寫法</td></tr>
+<tr><td style="white-space:nowrap;">土耳其</td><td>Acenersis ／ Roda Elektronik Ltd. Şti.</td><td class="small">多品牌工業型錄站</td><td style="white-space:nowrap;"><a href="https://www.acenersis.com/">acenersis.com</a></td><td>客製 PHP 自建站</td><td class="small">無 Shopify／wp-content／magento 字串；URL 為 slug-數字-temsilcilik.html 與 -urun.html，頁尾掛「Tasarım: Çekirdek Bilişim」</td></tr>
+<tr><td style="white-space:nowrap;">泰國</td><td>Min Thong Supplies Limited Partnership</td><td class="small">LINE 導購型目錄站</td><td style="white-space:nowrap;"><a href="https://www.minthong.com/th">minthong.com</a></td><td>iGetWeb.com（泰國本地 SaaS）</td><td class="small">頁尾標「Powered by iGetWeb.com」，圖片主機 cdn.igetweb.com；把關重抓 igetweb 指紋 174 次</td></tr>
+<tr><td style="white-space:nowrap;">馬來西亞</td><td>Arvo Aircond &amp; Refrigeration Tools Supply Sdn Bhd</td><td class="small">多品牌目錄型電商</td><td style="white-space:nowrap;"><a href="https://www.arvotools.com.my">arvotools.com.my</a></td><td>無法確認（客製目錄型，非 Shopify／WP／Magento／Wix）</td><td class="small">Cloudflare bot-check 擋下取不到 HTML，僅能由 /showproducts/productid/、/checkout/、/login/ 等 URL 結構推定</td></tr>
+<tr><td style="white-space:nowrap;">墨西哥</td><td>Travers Tool México (S. de R.L. de C.V.)</td><td class="small">Magento 工業五金站</td><td style="white-space:nowrap;"><a href="https://www.travers.com.mx/">travers.com.mx</a></td><td>Magento（已確認）</td><td class="small">把關重抓 990KB：x-magento 25、data-mage-init 11、Magento 64、checkout/cart 43、catalogsearch 638</td></tr>
+<tr><td style="white-space:nowrap;">台灣</td><td>澳立福實業有限公司 Olifor Enterprise Co., Ltd.<span class="small">（統編 28012506）</span></td><td class="small">無自有官網</td><td style="white-space:nowrap;"><b>無官網</b></td><td>&mdash;</td><td class="small">VETO 官方國際代理商頁僅列公司名與聯絡方式、未附網址；現行對外通路為 FB 專頁與蝦皮賣場</td></tr>
+<tr><td style="white-space:nowrap;">中國</td><td>南通盈丰阁贸易有限公司 Nantong Yingfeige Trading Co., Ltd</td><td class="small">查無官網</td><td style="white-space:nowrap;"><b>無官網</b></td><td>&mdash;</td><td class="small">多輪搜尋中國工商／稅務公開資料庫、Alibaba、1688 均未命中，僅在 VETO 官方代理商頁被列名；公司中文名為音譯</td></tr>
+</tbody>
+</table>
+</div>
+<p class="small"><b>來源：</b>本表逐格取自本次 workflow 各深研 agent 的結構化回傳欄位（company／url／platform／platform_evidence／dealer_profile），並套用把關（verify）agent 的 site_corrections 更正；原始回傳未載明者一律標「&mdash;」，未作任何推測補值。</p>
+
+<div class="tblwrap">
+<table>
+<thead><tr><th>平台類別</th><th class="num">站數</th><th>站台</th><th>觀察</th></tr></thead>
+<tbody>
+<tr><td>WordPress + WooCommerce</td><td class="num">5</td><td>VETO 官方總站、澳洲 vetopropac.com.au、紐西蘭 vetopropac.co.nz（研判）、以色列 Or Shy、加拿大 vetopropac.ca（WP + Elementor，無電商層）</td><td><b>最大宗</b>，含品牌總站本身；三個 VETO 專屬國別站有兩個用它</td></tr>
+<tr><td>Shopify</td><td class="num">2</td><td>日本 vetopropac-japan.com、英國 Epic Air</td><td>兩站都是本次體驗最完整的電商；日本站是全球最佳範本</td></tr>
+<tr><td>自建／客製（Next.js、JSP、PHP）</td><td class="num">4</td><td>Aspen 集團站（Next.js headless）、南韓 Sang-Bo（JSP B2B 訂貨網）、土耳其 Acenersis（客製 PHP）、馬來西亞 Arvo（客製目錄，未能驗證）</td><td>多為母集團或多品牌工業經銷商，重型錄與詢價，輕零售體驗</td></tr>
+<tr><td>舊式開源／區域 SaaS</td><td class="num">4</td><td>英國 Beesleys（osCommerce 4.0）、冰島 Pronet（Joomla + VirtueMart）、泰國 Min Thong（iGetWeb）、越南 G7（Sapo）</td><td>在地中小企業慣用；體驗普遍落後，但都能跑基本電商</td></tr>
+<tr><td>Magento</td><td class="num">1</td><td>墨西哥 Travers</td><td>大型品項庫存（33,000+）撐得起，但搜尋故障拖垮體驗</td></tr>
+<tr><td>無官網</td><td class="num">2</td><td>台灣 Olifor、中國 Nantong</td><td>台灣屬空白市場</td></tr>
+</tbody>
+</table>
+</div>
+<p class="small"><b>結論：</b>沒有任何「業界標準平台」。體驗最好的兩站（日本、英國 Epic Air）都在 Shopify，而 VETO 自家與兩個國別站在 WooCommerce。<b>平台不是決勝點，「有沒有把 VETO 當獨立品牌經營」才是。</b></p>
+
+<h3>5.2 B2B 他們怎麼做</h3>
+<div class="tblwrap">
+<table>
+<thead><tr><th>B2B 成熟度</th><th class="num">站數</th><th>做法</th></tr></thead>
+<tbody>
+<tr><td><b>有正式化入口</b></td><td class="num">3</td><td>VETO 官方（Become a Dealer／Sales Rep／Country Distributor ＋ Distributor Portal）；紐西蘭（獨立 /distribution/ 申請頁 ＋ 首單折扣）；南韓 Sang-Bo（會員制 B2B 訂貨網 yes09，登入才看價）</td></tr>
+<tr><td>獨立資訊頁但只引導洽詢</td><td class="num">3</td><td>Aspen 集團（Wholesaler Information ＋ Distributors）、澳洲（Become A Distributor 表單）、冰島（Heildsala 批發專區）</td></tr>
+<tr><td>不掛價 ＋ 詢價制（隱形 B2B）</td><td class="num">4</td><td>以色列 Or Shy、越南 G7、土耳其 Acenersis、泰國 Min Thong</td></tr>
+<tr><td>無任何 B2B 入口</td><td class="num">6</td><td>日本、英國 Epic Air、英國 Beesleys、加拿大、馬來西亞（未能確認）、墨西哥</td></tr>
+</tbody>
+</table>
+</div>
+<p class="small">上表是以站為單位的成熟度分級；下表則把各站 <code>b2b</code> 欄位拆成 7 項 B2B 要素逐格判讀（兩表角度不同，非同一種歸類）。欄名簡寫：經銷專頁＝經銷／批發專頁｜申請表單＝線上經銷申請表單｜登入專區＝經銷商登入專區｜登入看價＝登入才看得到價格｜詢價制＝商品不掛價、走詢價｜月結帳戶＝月結或信用帳戶｜線上下單＝線上批發下單或報價系統。<span class="good">&#10003;</span>＝原始回傳明載具備｜<span class="bad">&#10007;</span>＝原始回傳明載無或明確「未見」｜<span class="small">&mdash;</span>＝原始回傳未提及或自述未能確認。</p>
+<div class="tblwrap">
+<table style="min-width:680px;">
+<thead><tr><th>站台／備註</th><th style="text-align:center;white-space:normal;width:58px;padding:8px 4px;">經銷專頁</th><th style="text-align:center;white-space:normal;width:58px;padding:8px 4px;">申請表單</th><th style="text-align:center;white-space:normal;width:58px;padding:8px 4px;">登入專區</th><th style="text-align:center;white-space:normal;width:58px;padding:8px 4px;">登入看價</th><th style="text-align:center;white-space:normal;width:58px;padding:8px 4px;">詢價制</th><th style="text-align:center;white-space:normal;width:58px;padding:8px 4px;">月結帳戶</th><th style="text-align:center;white-space:normal;width:58px;padding:8px 4px;">線上下單</th></tr></thead>
+<tbody>
+<tr><td style="width:250px;"><b>美國｜VETO 官方站</b><br><span class="small">Become a Dealer／Sales Rep／Country Distributor ＋ Distributor-Sales Rep Portal；另有 Veto Super Store 加盟制與 Custom Logo／Fleet／政府／軍警／學校／職訓六大 Program（把關補正）</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td></tr>
+<tr><td style="width:250px;"><b>日本｜LABAVO</b><br><span class="small">首頁／商品頁／about 頁均無批發申請、trade account 或月結報價入口；經銷商地圖屬 B2C 導購性質</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td></tr>
+<tr><td style="width:250px;"><b>澳洲｜Aspen Pumps AP</b><br><span class="small">零售走 WooCommerce 明碼直購、批發走「Where To Buy → Become A Distributor」人工申請表單，兩軌分離</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td></tr>
+<tr><td style="width:250px;"><b>紐西蘭｜Premium Tools</b><br><span class="small">獨立 /distribution/ 頁鎖定「有倉庫和／或展示間的貿易批發商」，填表由業務聯繫並給首張訂單折扣；月結與線上批發下單細節未能查證</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td></tr>
+<tr><td style="width:250px;"><b>加拿大｜Triangle</b><br><span class="small">站上無任何 B2B／trade account／批發／月結入口，統一由美國總站「Become a Veto Pro Pac Dealer」頁處理</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td></tr>
+<tr><td style="width:250px;"><b>英國｜Epic Air</b><br><span class="small">把關實查 trade account＝0、wholesale＝0；「Veto VIP Club」實為頁尾外連 omniform1 的名單蒐集表單，非 B2B 通路入口，批發條件須電洽</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td></tr>
+<tr><td style="width:250px;"><b>英國歐洲｜Javac／Aspen 集團</b><br><span class="small">Wholesaler Information ＋ Distributors 獨立成頁，但非線上申請表單或會員登入式 Trade Account，屬「引導洽詢」非自助式 B2B</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td></tr>
+<tr><td style="width:250px;"><b>英國｜Beesleys</b><br><span class="small">定位零售（B2C）＋實體店面與維修服務，無批發報價流程；同時列名官方國際代理商與英國 Amazon 授權賣家</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td></tr>
+<tr><td style="width:250px;"><b>冰島｜Pronet</b><br><span class="small">設「Heildsala（批發）」與「Tæknideild（技術部）」分區顯示有 B2B 通路，但經銷申請／月結／報價機制官網未載明</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td></tr>
+<tr><td style="width:250px;"><b>南韓｜Sang-Bo</b><br><span class="small">yes09.sangbo.co.kr 為會員制批發訂貨網，訪客看不到價、須會員帳號報價下單；惟站內未陳列 VETO 品項，南韓實走在地零售通路鋪貨</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td></tr>
+<tr><td style="width:250px;"><b>以色列｜Or Shy</b><br><span class="small">VETO 品項刻意不掛價、不設購物車，走詢價／業務接洽；原文僅載「一般會員註冊登入後可下載技術規格與型錄 PDF」，未載明有經銷商專屬區或登入後可見價格，故該兩欄標未確認</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td></tr>
+<tr><td style="width:250px;"><b>越南｜G7 Tools</b><br><span class="small">隱藏價格＋須詢價是典型 B2B 訊號，但無正式化的批發申請流程或線上報價系統</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td></tr>
+<tr><td style="width:250px;"><b>土耳其｜Acenersis</b><br><span class="small">詢價制工業型錄站，無電商結帳流程；會員登入疑為報價／採購入口但未查證；3 筆重複紀錄已合併</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td></tr>
+<tr><td style="width:250px;"><b>泰國｜Min Thong</b><br><span class="small">詢價與訂購全數導向 LINE 官方帳號與電話，非線上 B2B 自助系統；把關實查站上 0 個 VETO 品項</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td></tr>
+<tr><td style="width:250px;"><b>馬來西亞｜Arvo</b><br><span class="small">bot-check 阻擋，B2B 有無均未能確認；站型看似單一 B2C 商店（購物車直接結帳），需人工瀏覽器實測</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td></tr>
+<tr><td style="width:250px;"><b>墨西哥｜Travers</b><br><span class="small">導覽與商品頁均未見經銷申請、trade account、報價系統、批發價或月結入口，可能走業務窗口線下報價</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td></tr>
+<tr><td style="width:250px;"><b>台灣｜澳立福</b><br><span class="small">無自有官網；B2B 月結後台正是本案要補上的缺口</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td></tr>
+<tr><td style="width:250px;"><b>中國｜南通盈丰阁</b><br><span class="small">查無官網，無可評估</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td></tr>
+</tbody>
+</table>
+</div>
+<p class="small"><b>來源：</b>逐格取自本次 workflow 各深研 agent 回傳的 <code>b2b</code> 欄位原文，並套用把關 agent 對 Epic Air（Veto VIP Club 非 B2B 入口）、VETO 官方站（補 Become a Country Distributor 與 Veto Super Store）、Min Thong（站上 0 個 VETO 品項）三處的更正。「月結帳戶」一欄 18 站無一站標 <span class="good">&#10003;</span>，與下方結論一致。</p>
+
+<div class="keycard">
+<p style="margin:0;"><b>這是台灣最大的空白位：全球 18 站中，沒有任何一站做到「線上自助申請 trade account → 審核後登入看經銷價 → 月結下單」的完整閉環。</b>最接近的南韓 yes09 是會員制看價，但一般訪客連零售價都看不到；最接近台灣規劃的澳洲是雙軌，但 B2B 仍走人工表單。台灣站若把這個閉環做出來，不只領先亞太所有代理，也補上品牌總站自己沒做的事。</p>
+</div>
+
+<h3>5.3 共同的功能標配</h3>
+<p class="small">下表統計 16 個有官網的站台（排除台灣、中國兩家無官網者）。</p>
+<div class="tblwrap">
+<table>
+<thead><tr><th>功能</th><th class="num">出現站數</th><th>判讀</th></tr></thead>
+<tbody>
+<tr><td>依系列／品類分類</td><td class="num">16 / 16</td><td>絕對標配</td></tr>
+<tr><td>會員登入</td><td class="num">12 / 16</td><td>標配</td></tr>
+<tr><td>購物車與線上結帳</td><td class="num">10 / 16</td><td>標配（6 站刻意不做，走詢價制）</td></tr>
+<tr><td>經銷商地圖／Where to Buy</td><td class="num">7 / 16</td><td>凡把 VETO 當品牌經營者必有</td></tr>
+<tr><td>依職業別分類（Trade／Electrician／HVAC）</td><td class="num">4 / 16</td><td><b>高價值差異化</b>：官方站、日本、澳洲、Epic Air 都有</td></tr>
+<tr><td>5 年保固專頁／線上申請</td><td class="num">4 / 16</td><td>VETO 專屬站必備（日本、澳洲、紐西蘭、馬來西亞商品頁標示）</td></tr>
+<tr><td>型錄 PDF／技術資料下載</td><td class="num">5 / 16</td><td>B2B 導向站必備</td></tr>
+<tr><td>影片內嵌（產品／裝載示範）</td><td class="num">4 / 16</td><td>轉換率關鍵，多數站沒做</td></tr>
+<tr><td>商品評論／客戶實拍</td><td class="num">3 / 16</td><td>只有官方站、日本、Epic Air（Trustpilot）</td></tr>
+<tr><td>多語言</td><td class="num">3 / 16</td><td>以色列、墨西哥、Aspen 集團</td></tr>
+<tr><td>多幣別</td><td class="num">0 / 16</td><td>全球零站，台灣不必做</td></tr>
+<tr><td>防偽／未授權通路警示</td><td class="num">1 / 16</td><td>只有日本，但這正是台灣最需要的</td></tr>
+<tr><td>互動選品工具</td><td class="num">1 / 16</td><td>只有日本「VETO 診斷」</td></tr>
+</tbody>
+</table>
+</div>
+
+<p class="small">下表把 &sect;4 各站的 <code>features</code> 欄位拆成 11 項 B2C 功能逐格判讀（欄名簡寫：結帳＝線上結帳｜會員＝會員登入｜庫存＝庫存狀態顯示｜評論＝商品評論或客戶實拍｜Blog＝部落格或內容專區｜門市地圖＝門市／經銷商地圖 Where to Buy）。<span class="good">&#10003;</span>＝原始回傳明載具備｜<span class="bad">&#10007;</span>＝原始回傳明載無或明確「未見」｜<span class="small">&mdash;</span>＝原始回傳未提及或自述未能確認，一律不臆測。</p>
+<div class="tblwrap">
+<table style="min-width:800px;">
+<thead><tr><th>站台／備註</th><th style="text-align:center;white-space:normal;width:52px;padding:8px 3px;">購物車</th><th style="text-align:center;white-space:normal;width:52px;padding:8px 3px;">結帳</th><th style="text-align:center;white-space:normal;width:52px;padding:8px 3px;">會員</th><th style="text-align:center;white-space:normal;width:52px;padding:8px 3px;">庫存</th><th style="text-align:center;white-space:normal;width:52px;padding:8px 3px;">多幣別</th><th style="text-align:center;white-space:normal;width:52px;padding:8px 3px;">多語</th><th style="text-align:center;white-space:normal;width:52px;padding:8px 3px;">尺寸指南</th><th style="text-align:center;white-space:normal;width:52px;padding:8px 3px;">影片</th><th style="text-align:center;white-space:normal;width:52px;padding:8px 3px;">評論</th><th style="text-align:center;white-space:normal;width:52px;padding:8px 3px;">Blog</th><th style="text-align:center;white-space:normal;width:52px;padding:8px 3px;">門市地圖</th></tr></thead>
+<tbody>
+<tr><td style="width:230px;"><b>美國｜VETO 官方站</b><br><span class="small">品牌本站；把關重抓確認 Cart／$0.00 之 WooCommerce 直售層，另有願望清單與產品比較</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td></tr>
+<tr><td style="width:230px;"><b>日本｜LABAVO</b><br><span class="small">另有 5 年保固專頁、「VETO 診斷」30 秒選品測驗、防偽／未授權通路警示頁、LINE 導流折價券</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td></tr>
+<tr><td style="width:230px;"><b>澳洲｜Aspen Pumps AP</b><br><span class="small">WooCommerce 明碼直購（NORWALK+ 16L TOTE A$224）；Where To Buy 列全國／獨立／線上經銷商</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td></tr>
+<tr><td style="width:230px;"><b>紐西蘭｜Premium Tools</b><br><span class="small">Cloudflare 防護擋下逐頁檢視，除 Where to Buy 門市地圖外均標未能確認（原始回傳明載「勿臆測」）</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td></tr>
+<tr><td style="width:230px;"><b>加拿大｜Triangle</b><br><span class="small">單頁登陸頁；購物全數導向第三方經銷商（Westburne、RSL）或美國總站</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td></tr>
+<tr><td style="width:230px;"><b>英國｜Epic Air</b><br><span class="small">商品卡含 SKU／庫存狀態／含稅價；Trustpilot 評論；MVHR Info Center 部落格；原文明載單一 GBP 幣別、無多語</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td></tr>
+<tr><td style="width:230px;"><b>英國歐洲｜Javac／Aspen 集團</b><br><span class="small">把關實查全站 0 個 cart／checkout；多國站台＋Region Redirect；另有 BIM 圖檔與 SDS 下載</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td></tr>
+<tr><td style="width:230px;"><b>英國｜Beesleys</b><br><span class="small">osCommerce 4.0，含維修服務頁；把關實查具 viewport／Bootstrap／46 條 @media，原判「非響應式」已刪</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td></tr>
+<tr><td style="width:230px;"><b>冰島｜Pronet</b><br><span class="small">官網資訊有限、未逐一驗證；設 Heildsala 批發專區與 Tæknideild 技術部</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td></tr>
+<tr><td style="width:230px;"><b>南韓｜Sang-Bo</b><br><span class="small">訪客看不到價，須會員登入報價下單（yes09 B2B 訂貨網）；首爾／光州／釜山三據點資訊非地圖</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td></tr>
+<tr><td style="width:230px;"><b>以色列｜Or Shy</b><br><span class="small">VETO 品項未顯示價格、無加入購物車鈕；型錄與技術 PDF 須登入下載；EN／HE 雙語</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td></tr>
+<tr><td style="width:230px;"><b>越南｜G7 Tools</b><br><span class="small">商品清單頁完全不顯示價格（需登入或詢價）；胡志明市、河內兩處實體門市</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td></tr>
+<tr><td style="width:230px;"><b>土耳其｜Acenersis</b><br><span class="small">3 筆重複紀錄已合併；純土耳其文、無標價無購物車；新聞區偏公司公告；會員登入入口 3 筆記載不一致故標未確認</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td></tr>
+<tr><td style="width:230px;"><b>泰國｜Min Thong</b><br><span class="small">商品頁按鈕為「聯繫經銷商」而非加入購物車；把關實查全站 0 個 VETO 品項，不宜作代理站範例</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td></tr>
+<tr><td style="width:230px;"><b>馬來西亞｜Arvo</b><br><span class="small">bot-check 擋下完整 HTML，購物車／會員由 /login/、/checkout/ URL 結構推定，進階功能一律未能確認</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td></tr>
+<tr><td style="width:230px;"><b>墨西哥｜Travers</b><br><span class="small">Magento（把關重抓 checkout/cart 43 次）；西／英雙語；站內搜尋故障，站上表單自曝「El buscador no funciona」</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="good">&#10003;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="bad">&#10007;</span></td></tr>
+<tr><td style="width:230px;"><b>台灣｜澳立福</b><br><span class="small">無自有官網；現行通路為 FB 專頁（3,586 讚）與蝦皮賣場，無可評估</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td></tr>
+<tr><td style="width:230px;"><b>中國｜南通盈丰阁</b><br><span class="small">查無官網，無可評估</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td><td style="text-align:center;padding:8px 4px;"><span class="small">&mdash;</span></td></tr>
+</tbody>
+</table>
+</div>
+<p class="small"><b>來源：</b>逐格取自本次 workflow 各深研 agent 回傳的 <code>features</code>／<code>frontend</code> 欄位原文，並套用把關 agent 的 site_corrections（Epic Air、tool-shop、Min Thong、vetopropac.com 四站）。因本表對「未能確認」一律保守標「&mdash;」（紐西蘭、馬來西亞兩站受 Cloudflare／bot-check 阻擋最多），逐格 <span class="good">&#10003;</span> 數會略低於上表以站台為單位的統計值。</p>
+
+<h3>5.4 台灣官網該有的功能清單</h3>
+<div class="tblwrap">
+<table>
+<thead><tr><th>功能</th><th>來源參考</th><th>理由</th><th>優先序</th></tr></thead>
+<tbody>
+<tr><td>品牌落地頁（品牌故事、5 年保固、TOUGH/DURABLE 主張）</td><td>澳洲、日本</td><td>接住 FB 與蝦皮流量的落點，也是「不是水貨」的第一印象</td><td><span class="pill">MVP</span></td></tr>
+<tr><td>雙軸商品分類：系列 × 職業別（水電／木工／空調／機電／消防）</td><td>官方站、日本、Epic Air</td><td>台灣工班同樣依工種分流，是最有效的導覽</td><td><span class="pill">MVP</span></td></tr>
+<tr><td>B2C 明碼零售 ＋ 購物車結帳（綠界／藍新、超商取貨）</td><td>澳洲</td><td>與蝦皮並行不衝突，官網買有保固登錄與正貨保證</td><td><span class="pill">MVP</span></td></tr>
+<tr><td>經銷商／展示店地圖</td><td>官方站、加拿大、紐西蘭</td><td>北台灣已有認證展示店，地圖是最低成本的信任工具</td><td><span class="pill">MVP</span></td></tr>
+<tr><td>5 年保固說明 ＋ 線上保固登錄</td><td>澳洲、日本</td><td>保固是 VETO 的核心賣點，也是收名單的正當理由</td><td><span class="pill">MVP</span></td></tr>
+<tr><td>正貨與授權通路聲明（防水貨）</td><td>日本</td><td>台灣蝦皮／露天水貨亂價，這頁直接保護代理利益</td><td><span class="pill">MVP</span></td></tr>
+<tr><td>經銷申請頁（trade account 申請表單 ＋ 首單折扣）</td><td>紐西蘭</td><td>一頁就能做，先把 B2B 名單收起來</td><td><span class="pill">MVP</span></td></tr>
+<tr><td>LINE 官方帳號串接（諮詢／導購／折價券）</td><td>泰國、日本</td><td>台灣工班用 LINE，這是轉換最短路徑</td><td><span class="pill">MVP</span></td></tr>
+<tr><td>可用的站內搜尋（型號直搜）</td><td>墨西哥（反例）</td><td>搜尋壞掉等於店門關一半</td><td><span class="pill">MVP</span></td></tr>
+<tr><td>B2B 分級價 ＋ 登入後看經銷價</td><td>南韓 yes09</td><td>B2B 雙軌的核心，零售價與經銷價分離</td><td><span class="pill pill-clay">二期</span></td></tr>
+<tr><td>月結帳期與額度控管</td><td>全球無現成範本</td><td>台灣工程行慣用月結，這是最大差異化</td><td><span class="pill pill-clay">二期</span></td></tr>
+<tr><td>互動選品工具（工具袋診斷）</td><td>日本</td><td>降低選購門檻，也是社群素材</td><td><span class="pill pill-clay">二期</span></td></tr>
+<tr><td>產品影片與實際裝載示範</td><td>官方站、日本</td><td>工具袋要看「裝得下什麼」，影片比文字有效</td><td><span class="pill pill-clay">二期</span></td></tr>
+<tr><td>客戶實拍與評論</td><td>官方站、日本</td><td>工班同儕背書，比品牌自誇有效</td><td><span class="pill pill-clay">二期</span></td></tr>
+<tr><td>型錄 PDF 下載</td><td>以色列、南韓</td><td>給經銷商與工程採購用</td><td><span class="pill pill-clay">二期</span></td></tr>
+<tr><td>多語言／多幣別</td><td>全球僅 3 站有多語、0 站多幣別</td><td><b>不做</b>——台灣市場不需要，別浪費預算</td><td><span class="pill pill-warn">不做</span></td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- ============ 6 ============ -->
+<h2 id="s6">6. 可行性評估與建議</h2>
+<p class="small">本章可直接作為對代理商的提案內容：前台功能優先序、B2B 模組、分階段上線、試辦步驟與驗收指標。</p>
+
+<h3>6.1 建議平台：對接先前 EasyStore &gt; Shopify 評估</h3>
+<div class="card">
+<p><b>建議維持先前九份盡調的終局結論——採 EasyStore，不採 Shopify。</b>本次全球掃描沒有推翻該結論的證據，反而補強了兩點：</p>
+<ul>
+<li><b>平台不是決勝點。</b>全球體驗最好的日本站在 Shopify，但品牌總站與兩個國別站在 WooCommerce，各國中小代理則散落在 osCommerce、Joomla、Sapo、iGetWeb。做得好壞取決於「有沒有把 VETO 當獨立品牌經營」，不是取決於選哪家 SaaS。</li>
+<li><b>台灣的真正需求是 B2B 月結，而這正是全球 18 站的集體空白。</b>Shopify 的月結與分級價要靠 B2B 方案或外掛堆疊；EasyStore 在台灣市場的定位本就含 B2B 分級價、台灣金流（綠界／藍新）、超商取貨與 LINE 串接，路徑較短。</li>
+</ul>
+<div class="note" style="margin:12px 0 0;"><b>需確認：</b>EasyStore 的 B2B 月結、分級價、額度控管等具體功能與費率，屬方案層級差異，<b>開帳前務必向 EasyStore 業務逐項書面確認</b>，本報告不代為背書規格。若確認結果為月結需自行開發，則二期改以「線上下單 ＋ 後台人工開立月結對帳單」折衷。</div>
+</div>
+
+<h3>6.2 前台功能優先序（MVP → 二期）</h3>
+<div class="tblwrap">
+<table>
+<thead><tr><th style="width:14%">階段</th><th>內容</th><th>做到什麼程度算完成</th></tr></thead>
+<tbody>
+<tr>
+<td><b>MVP</b><br><span class="small">第 1–6 週</span></td>
+<td>品牌落地頁／雙軸分類（系列 × 職業別）／B2C 明碼零售 ＋ 購物車結帳（綠界或藍新 ＋ 超商取貨）／經銷商與展示店地圖／5 年保固說明與線上登錄／正貨與授權通路聲明／經銷申請表單頁（含首單折扣）／LINE 官方帳號串接／站內型號搜尋</td>
+<td>一般消費者能在官網完成「找到對的袋 → 下單 → 取貨 → 登錄保固」全程；工程行能在官網送出經銷申請</td>
+</tr>
+<tr>
+<td><b>二期</b><br><span class="small">第 7–16 週</span></td>
+<td>B2B 分級價與登入後經銷價／月結帳期與額度控管／互動選品工具／產品影片與裝載示範／客戶實拍與評論／型錄 PDF 下載／FB 與蝦皮的導流串接與成效追蹤</td>
+<td>經銷商能自助登入下單、看到自己的分級價、月底自動出對帳單</td>
+</tr>
+<tr>
+<td><span class="pill pill-warn">不做</span></td>
+<td>多語言、多幣別、跨境金流</td>
+<td>全球 18 站中多幣別 0 站、多語 3 站，台灣市場無需求，預算應投在 B2B 模組</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h3>6.3 B2B 模組設計（參考各國做法）</h3>
+<div class="tblwrap">
+<table>
+<thead><tr><th style="width:22%">環節</th><th>參考來源</th><th>台灣建議做法</th></tr></thead>
+<tbody>
+<tr><td>申請入口</td><td>紐西蘭 /distribution/</td><td>獨立一頁，明訂資格（有公司登記／有店面或倉庫／首單門檻），表單欄位含統編、營業項目、預估月採購量；<b>放首單折扣當誘因</b></td></tr>
+<tr><td>審核與開通</td><td>南韓 yes09（會員制）</td><td>人工審核 → 後台建 trade account → email 通知；MVP 階段人工即可，二期再自動化</td></tr>
+<tr><td>分級價</td><td>南韓 yes09</td><td>至少三級（一般零售／認證經銷／展示店），登入後才顯示經銷價；<b>未登入一律顯示零售價，不學南韓「訪客看不到價」</b></td></tr>
+<tr><td>下單與月結</td><td>全球無現成範本</td><td>經銷帳號可選「月結」付款方式（額度內），月底系統出對帳單；超額或逾期自動鎖為預付</td></tr>
+<tr><td>經銷商露出</td><td>官方站 Dealer Locator、加拿大</td><td>審核通過的經銷商自動上「授權經銷商地圖」——<b>這是給經銷商的實質回報，也是打水貨的武器</b></td></tr>
+<tr><td>雙軌不打架</td><td>澳洲（B2C 明碼 ＋ B2B 表單同站）</td><td>零售價由代理商統一維持，經銷價只在登入後可見；官網零售價不低於經銷商店頭價，避免與自家通路搶客</td></tr>
+</tbody>
+</table>
+</div>
+<div class="note"><b>提醒：</b>「經銷價不外流」是這個模組唯一的紅線。設計時要確保未登入狀態、搜尋引擎索引、分享連結與 PDF 型錄都不會意外洩漏分級價，上線前列為必測項目。</div>
+
+<h3>6.4 分階段上線與試辦步驟</h3>
+<div class="tblwrap">
+<table>
+<thead><tr><th style="width:12%">階段</th><th style="width:14%">時程</th><th>動作</th><th>產出</th></tr></thead>
+<tbody>
+<tr><td><b>P0 準備</b></td><td>第 1–2 週</td><td>與代理商確認品項清單、零售價表、分級價政策、保固條款；向 EasyStore 逐項書面確認 B2B 功能與費率；確認公司現行辦公地（官方頁與商工登記兩址並存）；申請網域與金流</td><td>品項與價格表定稿、平台功能確認書、網域與金流帳號</td></tr>
+<tr><td><b>P1 MVP</b></td><td>第 3–6 週</td><td>建站與商品上架、雙軸分類、金流與物流串接、保固登錄、經銷申請頁、LINE 串接、經銷商地圖</td><td>可對外的 B2C 官網</td></tr>
+<tr><td><b>P2 試辦</b></td><td>第 7–10 週</td><td>先邀 <b>3–5 家</b>既有合作工程行當種子經銷商，人工開 trade account 走完一輪「申請 → 開通 → 看經銷價 → 下單 → 月結對帳」；同步把 FB 與蝦皮流量導向官網觀察轉換</td><td>試辦回饋清單、流程瓶頸紀錄</td></tr>
+<tr><td><b>P3 二期</b></td><td>第 11–16 週</td><td>依試辦回饋補齊 B2B 分級價與月結自動化、互動選品工具、影片與評論、型錄 PDF</td><td>完整 B2B ＋ B2C 雙軌官網</td></tr>
+<tr><td><b>P4 維運</b></td><td>上線後每月</td><td>經銷商地圖更新、正貨聲明維護、成效檢視與品項調整</td><td>月度成效表</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>6.5 驗收指標</h3>
+<div class="tblwrap">
+<table>
+<thead><tr><th style="width:16%">類別</th><th>指標</th><th>驗收門檻</th></tr></thead>
+<tbody>
+<tr><td rowspan="4">功能（P1）</td><td>站內搜尋輸入任一型號（TP-XL、DP3、Tech Pac 等）能命中正確商品頁</td><td>抽測 10 個型號，命中 10／10</td></tr>
+<tr><td>下單全程（加購 → 金流 → 超商取貨 → 出貨通知）可完成</td><td>真實小額下單各金流／物流組合各跑 1 次全通過</td></tr>
+<tr><td>保固登錄表單送出後有回信與後台紀錄</td><td>3 次測試全數留存</td></tr>
+<tr><td>經銷申請表單送出後 1 個工作日內有人回覆</td><td>試辦期間 100%</td></tr>
+<tr><td rowspan="3">B2B（P2–P3）</td><td>種子經銷商完成「申請 → 開通 → 下單 → 月結對帳」全流程</td><td>3–5 家全數走完至少 1 輪</td></tr>
+<tr><td><b>經銷價不外流</b>：未登入狀態、搜尋引擎快取、分享連結、PDF 型錄皆不顯示分級價</td><td>四項全數通過，<b>任一項失敗即不得上線</b></td></tr>
+<tr><td>經銷商對申請流程的主觀評分</td><td>試辦回訪 4 分以上（5 分制）</td></tr>
+<tr><td rowspan="3">成效（上線後 3 個月）</td><td>官網訂單佔線上總訂單（含蝦皮）比重</td><td>≥ 20%</td></tr>
+<tr><td>經銷申請有效件數（通過資格審核者）</td><td>≥ 10 件</td></tr>
+<tr><td>保固登錄件數（可轉為 CRM 名單）</td><td>≥ 官網訂單數的 50%</td></tr>
+<tr><td rowspan="2">品質底線</td><td>行動裝置全頁無橫向捲動、商品圖不破圖</td><td>三種主流手機尺寸實測通過</td></tr>
+<tr><td>正貨聲明頁與經銷商地圖資料與實際一致</td><td>每月核對 1 次，錯誤 0 筆</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="keycard">
+<h4 style="margin-top:0;">一句話總結給代理商</h4>
+<p style="margin:0;">全球 18 個 VETO 相關站台裡，沒有任何一站做到「線上自助申請經銷 → 登入看分級價 → 月結下單」的完整閉環；台灣目前又是零官網的空白市場。<b>先用 6 週把 MVP 上線接住既有社群與賣場流量，再用 10 週把 B2B 月結補上——這條路走完，台灣站會是 VETO 亞太做得最完整的代理商官網。</b></p>
+</div>
+
+<!-- ============ 7 ============ -->
+<h2 id="s7">7. 頁尾</h2>
+<footer>
+<p><b>報告：</b>VETO Pro Pac 全球代理布局 × 台灣代理商官網建站提案研究（2026-08）<br>
+<b>製作：</b>如菓室內裝修｜賈維斯　<b>日期：</b>2026-08-20　<b>版本：</b>v1.0</p>
+<p><b>範圍與數量：</b>全球代理與通路 37 家（官方名單背書 17、零售鋪貨 20）／代理官網深研 18 站（品牌總站 1、有官網代理 15、無官網代理 2）／初步線索 64 條 → 保留 48 筆 → 去重實查後收錄 37 家。</p>
+<p><b>資料狀態：</b>本報告為 2026-08 快照。代理關係一律以各站自述與官方頁面為準；「exclusive／獨家」字樣若無官方書面背書，一律記為 distributor。VETO 官方授權賣家頁發文日為 2020-02-14，據此來源之對象信心度標為 medium。聯絡資訊只收錄公開刊登者。部分站台受機器人防護，相關欄位已標「未能直接驗證」。正式對外引用前，建議重新抽查關鍵三站（日本、澳洲、紐西蘭）與 EasyStore 方案規格。</p>
+<p><b>剔除紀錄：</b>IMPEXRON（德，官網自承非官方代理）、Elfa／Distrelec（瑞典，證據頁已失效）、澳洲 6 家零售商（引用頁面上不存在）——共 8 家於把關階段剔除；6 筆「exclusive」全數降級為 distributor；2 站平台判斷已更正。</p>
+</footer>
+
+</div>
+</body>
+</html>
